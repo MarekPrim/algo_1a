@@ -149,3 +149,126 @@ nb<-Fe
 fin Affichage_avec_pile;
 
 On peut déplacer ce code dans un package affichage(différent de celui de pile, car pas même sujet)
+
+
+
+
+
+
+
+5)
+On pourrait rendre le paquetage Pile générique
+
+6)
+
+generic
+    type Type_Element is private;
+    Capacite:Integer;
+package Pile is
+    
+    type T_Pile is private;
+    
+    
+--Semantique : Initialise la Pile
+--Entrée : Rien
+--Sortie : Une Pile
+--Preconditions : Rien
+--Postconditions : Une pile vide {Pyle.sommet = Type_Element.{0}}
+    procedure init (Pyle : out T_Pile);
+
+--Semantique : Empile une valeur
+--Entrée : Un entier
+--Sortie : Une Pile avec la valeur empilée
+--Preconditions : Pyle.sommet < Capacite
+--Postconditions : {Pyle.Data(som)=Fe ^ FP'.som == FP.sommet + 1 }
+    procedure empiler (Pyle: in out T_Pile,value : in Type_Element);
+
+--Semantique : Depile une valeur
+--Entrée : Rien
+--Sortie : Une Pile depilée
+--Preconditions : Pyle.sommet != 0
+--Postconditions : Pyle'.som == Pyle.som - 1
+    procedure depiler (Pyle: in out T_Pile);
+
+--Semantique : Retourne le sommet de la pile
+--Entrée : Rien
+--Sortie : Un entier
+--Preconditions : Pile non vide
+--Postconditions : Pyle.Data(Pyle.sommet) == resultat
+    function getSommet(Pyle: in T_Pile) return Type_Element;
+
+--Semantique : Retourne si la pile est vide
+--Entrée : Rien
+--Sortie : Un booléen
+--Preconditions : Rien
+--Postconditions : resultat == (Pyle.sommet == 0)
+    function isEmpty(Pyle: in T_Pile) return Boolean;
+
+--Semantique : Retourne si deux piles sont égales
+--Entrée : Deux piles
+--Sortie : Un booléen
+--Preconditions : Pile1.sommet == Pile2.sommet
+--Postconditions : Rien
+    function '=' (P1:in T_Pile,P2:in T_Pile) return Boolean;
+    
+
+private
+
+
+type Donne_Pile is array (Capacite) of Type_Element;
+type T_Pile is
+        record
+            Data : Donne_Pile
+            Sommet : Type_Element
+        end record
+
+
+end T_Pile;
+
+7)
+
+with Pile
+use Pile
+procedure test_pile is
+
+package Pile_Int is new Pile(Capacite => 10, Type_Element => Integer);
+use Pile_Int;
+
+package Pile_Chr is new Pile(Capacite => 10, Type_Element => Character);
+use Pile_Chr;
+
+    pileEntier : Pile_Int;
+    pileChr : Pile_Chr;
+
+debut
+    Init(pileEntier)
+
+    Empiler(pileEntier,5)
+    Empiler(pileEntier,3)
+    Empiler(pileEntier,9)
+
+    Pragma(getSommet(pileEntier)==9)
+
+    Depiler(pileEntier)
+    Depiler(pileEntier)
+    Depiler(pileEntier)
+
+    Pragma(isEmpty(pileEntier))
+
+
+
+
+    Init(pileChr)
+
+    Empiler(pileChr,'5')
+    Empiler(pileChr,'3')
+    Empiler(pileChr,'9')
+
+    Pragma(getSommet(pileEntier)=='9')
+
+    Depiler(pileChr)
+    Depiler(pileChr)
+    Depiler(pileChr)
+
+    Pragma(isEmpty(pileChr))
+fin
