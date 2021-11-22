@@ -1,0 +1,70 @@
+-- R0 Jouer au jeu de la vie
+
+-- R1 comment "Jouer au jeu de la vie"
+    
+    -- Initialiser le jeu de la vie
+    
+    repeter 
+        
+        -- générer la génération suivante
+        
+    jusqu'à arret
+
+-- R2 Comment "Initialiser le jeu de la vie"
+    Créer un damier 
+    Remplir de valeurs vivant ou mort le damier
+    Afficher damier
+   
+-- R2 comment "générer la génération suivante" 
+    -- Creer le damier de la génération suivante en fonction de regles établit
+    -- Afficher le damier
+    
+
+-- R2 comment "Arret" -- out arret bool
+      
+      génération courante egale génération précédente ou nombre de génération voulue soit atteint
+
+-- R3 Comment Creer un Damier
+    
+    Lire les capacités du tableau -- out entier ligneMax, colonneMax
+    Type etat est une énumeration ('vivant', 'mort')
+    Type T_Tab est tableau (1..ligneMax, 1..colonneMax) de etat
+
+-- R3 comment "Remplir de valeurs vivant ou mort le damier"
+        remplirDamier(T_Tab : in out tableau) 
+
+-- R3 comment "afficher tableau"   
+    -- afficher le damier
+
+    -- paramètres
+
+        tab in
+
+    -- préconditions
+
+    -- postconditions
+        -- damier affichée
+    -- tests 
+
+    procedure affichage_conway(tab in)
+        -- Parcourir le tableau à deux dimensions et afficher les valeurs
+        -- afficher une ligne verticale du damier
+        pour i allant de 1 à tab.dimX
+            pour j allant de 1 à tab.dimY
+                -- afficher les caractères en fonction des valeurs de t(i,j)
+                    si tab(i,j).state = etat.vivant then
+                        Ecrire("O |");
+                    sinon
+                        Ecrire("/ |")
+                    fin si 
+             fin pour
+              -- afficher une ligne horizontale du damier
+        fin pour
+fin fonction     
+   
+-- R3 "Creer le damier de la génération suivante en fonction de regles établit"
+    
+        pour i de 1 à ligneMax
+            pour j de 1 à colonneMax
+                -- Compter nombre case adjente 
+                -- decider de l'état suivant de la case

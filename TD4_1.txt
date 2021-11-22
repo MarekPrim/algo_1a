@@ -1,0 +1,64 @@
+-- afficher les éléments d'un tableau
+
+constant capa : entier <- 50
+
+Type tab est tableau (1..capa) de entier
+Type FT est enregirstrement
+    Tab : tab
+    nb_el : entier 0<=nb_el<=capa
+fin enregistrement
+-- paramètres
+    FT : in FT
+    
+-- preconditions
+
+-- post-conditions
+    -- le tableau est affiché
+    
+-- test
+    voir sujet
+
+procedure att_tab(FT in FT) est
+    
+
+R0 : Afficher un tableau d'entiers en délimitant chaque élément par des virgules
+, et le tout entre crochets
+
+R1 : Comment "R0"
+
+    R1.1 : Afficher "["
+    Si FT n'est pas vide faire
+        R1.2 : Parcourir le tableau et afficher l'élément courant sauf le dernier séparé par une virgule -- in FT
+    Sinon afficher le dernier
+        Rien
+    Fin
+    R1.3 : Afficher "]"
+
+R2 : Comment "R1.2"
+    
+    Pour i allant de 1 jusqu'a FT.nb_el-1
+        Ecrire(FT.Tab(i))
+        Ecrire(",")
+    Fin Pour
+    Ecrire(FT.tab(FT.nb_el))
+    
+
+Début
+    Ecrire([)
+    -- si FT n'est pas vide
+       si FT.nb_el /= 0 alors
+        -- afficher les éléments de FT sauf le dernier
+          Pour i allant de 1 jusqu'à FR.nb_el - 1 faire
+                -- afficher FT.tab(i)
+                Ecrire(FT.Tab(i))
+                -- afficher ,
+                Ecrire(",")
+          Fin Pour
+          Ecrire(FT.tab(FT.nb_el))
+       sinon
+            rien
+       fin si
+       Ecrire(])
+       
+       
+       

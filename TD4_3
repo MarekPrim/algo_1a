@@ -1,0 +1,84 @@
+-- trier les éléments d'un tableau par insertion (vaut aussi pour l'exercice 4)
+
+-- paramètres
+    FT : in out T_Tabl
+    
+    
+-- precondition
+    --FT.nb_el /= 0
+   
+-- postconditions
+    A i E [1,FT.nb_el] FT.tab(i)<= FT.tab(i+1) et
+    FT' = permutation(FT)
+    
+-- tests
+    voir sujet
+    
+       
+procedure Tri_Ins(FT in out T_Tabl) est
+
+début
+
+    --R0 : Trier les éléments d'un tableau par insertion
+    
+    --R1 : Comment "R0"
+    
+    pour i allant de 1 à FT.nb_el - 1 faire
+        -- R1.1 : Insérer FT.tab(i+1) à sa place dans FT.tab(1..i)
+        
+        
+        
+    fin pour
+    
+    
+    --R2 : Comment "R1.1"
+    
+        temp<- tab(i)
+        k<-i
+        tant que (k > 1 et tab[k] > tmp) faire
+            tab[k+1] <- tab[k]
+            k <- k - 1
+        fin tant que
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fin

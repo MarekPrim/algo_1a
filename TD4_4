@@ -1,0 +1,124 @@
+-- trier les éléments d'un tableau par sélection (vaut aussi pour l'exercice 3)
+
+=================================================================
+-- sous-programmes    
+    
+-- trouver le minimum entre deux chiffres entiers
+
+-- paramètres
+    n : entier in
+    m : entier in
+    min : entier out
+    
+-- preconditions
+
+-- postconditons
+    min = MIN(n,m)
+    
+-- tests
+
+min(0,0) > min = 0
+min(3,-2) > min = -2
+min(-2,3) > min = -2
+min(15,1) > min = 1
+
+ fonction min(n in entier, m in entier, min out entier)
+ début
+            --R0 : Trouver le minimum entre deux chiffres
+            
+            --R1 : Comment "R0"
+                si n/=m alors
+                R1.1 : Vérifier l'ordre de (n,m)
+                sinon
+                    min<-n
+                fin si
+                Renvoyer min
+            
+            --R2 : Comment "R1.1"
+                    si n>m alors
+                        min<-m
+                    sinon
+                        min<-n
+                    fin si
+                                    
+ fin
+ ==================================================
+
+-- paramètres
+    FT : in out T_Tabl
+    
+-- precondition
+    --FT.nb_el /= 0
+   
+-- postconditions
+    A i E [1,FT.nb_el] FT.tab(i)<= FT.tab(i+1) et
+    FT' = permutation(FT)
+    
+-- tests
+    voir sujet
+    
+       
+procedure Tri_Sel(FT in out T_Tabl) est
+
+    debut
+    
+    
+    -- R0 : Trier un tableau par sélection
+    
+    -- R1 : Comment "R0"
+        pour i allant de 1 à FT.nb_el-1 faire
+        -- R1.1 Répérer l'indice minimum du sous-tableau  FT.tab(FT.nb_el)  -- FT in, min out
+        -- R1.2 Permuter la minimum min avec FT.tab(i) -- FT in out, min in
+        fin pour
+        
+    -- R2 : Comment "R1.1"
+        min<-FT.tab(i)
+        pour j allant de i+1 à N faire
+            min<-min(FT.tab(i)
+        fin pour
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    fin
