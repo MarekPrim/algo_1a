@@ -272,3 +272,82 @@ debut
 
     Pragma(isEmpty(pileChr))
 fin
+
+8)
+Si la pile vide, erreur
+Si on rencontre un caractère ouvrant, on empile
+Si on rencontre un caratère fermant et que c'est le même caractère que le sommet, on dépile
+Si à la fin, la pile est non vide, erreur
+
+
+
+9)
+with Pile
+use Pile
+
+procedure is-My_expression__correct__ is
+package Pile_Chr is new Pile(Capacite => 10, Type_Element => Character);
+use Pile_Chr;
+
+    ch:String
+    pileChr : Pile_Chr
+    taille: integer
+    ok: boolean := !false
+    indice : integer :=1
+begin
+    --lire la chaine
+    get_line(ch,taille)
+
+    Init(pileChr);
+    TQ(i<taille && ok) faire
+        si ch[i] = "{" OU "(" ou "[" faire
+            Empiler(pileChr)
+        fin si
+        si ch[i] = "}" OU ")" ou "]" faire
+            si ch[i] = getSommet(pileChr)
+                Depiler(pileChr)
+            sinon
+                ok<- false
+        fin si
+        i<- i++
+    FINTQ
+
+    //Utilisation case
+    TQ(i<taille && ok) alors
+        cas ch[i] alors
+            '(' , '[' :
+
+                Empiler(pileChr,ch[i]);
+                break;
+
+            ')' , ']' :
+
+                si pileVide(pileChr) alors
+                    ok<-false
+                sinon si getSommet(pileChr) == ch[i] alors
+                    Depiler(pileChr)
+                    break;
+                    
+                sinon
+                    ok<-false
+                    break;
+                fin si
+                
+            defaut:
+
+                null;
+                break;
+                
+        fin cas
+        i++
+    FINTQ
+
+    si ok alors
+        afficher("Correct")
+    sinon
+        afficher("Pas correct")
+    fin si;
+
+
+
+end is-My_expression__correct__
