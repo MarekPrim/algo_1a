@@ -119,18 +119,33 @@ Afficher des entiers
 
 with pile
 use pile
-procedure Affichage_avec_pile(Val:in Integer) is
- temp<-Val
- Tant que temp>0
-    Empiler(unePile,temp%10);
-    temp<-temp/10
+procedure Affichage_avec_pile(Fe:in Integer) is
+ nb : Integer
+ P : pile
+ begin
+
+ --Afficher le signe - si fe est négatif
+if fe<0 do
+    ecrire('-')
+sinon
+    null;
+end
+
+-- empiler les digits à partir des unitées(?)
+init(P)
+nb<-Fe
+ Tant que nb/10 != 0
+    Empiler(P,nb%10);
+    nb<-nb/10
  FinTQ
 
- TQ(NON(estVide(unePile)))
-    Afficher(sommet(unePile))
-    depiler(unePile)
+-- afficher les digits empilés
+ TQ(NON(estVide(P)))
+    Afficher(sommet(P))
+    depiler(P)
  FinTQ
 
 
+fin Affichage_avec_pile;
 
-
+On peut déplacer ce code dans un package affichage(différent de celui de pile, car pas même sujet)
