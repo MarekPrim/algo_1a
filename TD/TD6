@@ -1,0 +1,22 @@
+package Pile is
+    Capacite:Integer;
+    type T_Pile is private;
+    subtype Donne_Pile is array (Capacite) of Integer;
+    
+
+    procedure init (Pyle : out T_Pile);
+
+    procedure push (Pyle: in out T_Pile,value : in Integer);
+
+    procedure pop (Pyle: in out T_Pile);
+
+    function getSommet() return Integer;
+
+    function isEmpty(Pyle: in T_Pile) return Boolean;
+
+
+    type T_Pile is
+        record
+            Data : Donne_Pile
+            Sommet : Integer
+        end record

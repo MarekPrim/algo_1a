@@ -66,5 +66,5 @@ fin fonction
     
         pour i de 1 à ligneMax
             pour j de 1 à colonneMax
-                -- Compter nombre case adjente 
+                -- Compter nombre case adjacente 
                 -- decider de l'état suivant de la case
