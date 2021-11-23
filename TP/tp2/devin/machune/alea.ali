@@ -1,0 +1,71 @@
+V "GNAT Lib v9"
+A -gnatwa
+P SS ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U alea%b		alea.adb		ddfdb8c9 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.numerics%s	a-numeri.ads		a-numeri.ali
+W ada.numerics.discrete_random%s
+W system%s		system.ads		system.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.random_numbers%s  s-rannum.adb		s-rannum.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
+
+U alea%s		alea.ads		0613b6e9 EE NE OO PK
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-numeri.ads		20200312110721 bb51c45a ada.numerics%s
+D a-nudira.ads		20200312110721 71e55def ada.numerics.discrete_random%s
+D a-nudira.adb		20200312110721 72908cdb ada.numerics.discrete_random%b
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D alea.ads		20210927150156 0613b6e9 alea%s
+D alea.adb		20210927150156 aa0b53cf alea%b
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-imgint.ads		20200312110721 02dbe0c2 system.img_int%s
+D s-imguns.ads		20200312110721 9ff43cf7 system.img_uns%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-rannum.ads		20200312110721 99ade2f2 system.random_numbers%s
+D s-rannum.adb		20200312110721 20ba1217 system.random_numbers%b
+D s-ransee.ads		20200312110721 01a57b33 system.random_seed%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-valint.ads		20200312110721 48a52a3f system.val_int%s
+D s-valuns.ads		20200312110721 10a8ed3b system.val_uns%s
+X 1 ada.ads
+16K9*Ada 20e8 7|2r6 13r27
+X 2 a-numeri.ads
+16K13*Numerics 32e17 7|2r10 13r31
+X 3 a-nudira.ads
+44k22*Discrete_Random 75e33 7|2w19 13r40
+50R9 Generator<14|63R9> 7|16r11[13]
+52V13 Random{7|12I12} 7|19s12[13]
+55U14 Reset<14|100p14> 7|18s7[13]
+X 4 a-nudira.adb
+53V16 Random[14|83]{7|12I12} 15|392b13[7|13]
+X 6 alea.ads
+2K9*Alea 10l5 10e9 7|4b14 22l5 22t9
+8V12*Alea_1_100{integer} 7|11b13 21l8 21t18
+X 7 alea.adb
+12I12 Intervalle<short_short_integer> 13r57 15r11 20r28
+13K15 Gene[3|44] 14r11
+15i7 n{12I12} 19m7 20r45
+16r7 G{3|50R9[13]} 18r14 19r20
+X 8 interfac.ads
+74M9*Unsigned_32
+77M9*Unsigned_64
+X 14 s-rannum.ads
+75V13*Random{8|74M9} 15|221i21
+76V13*Random{8|77M9} 15|221i21
+
