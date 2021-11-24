@@ -32,18 +32,19 @@ begin
 --R0 Trier un tableau de taille N<=N_MAX par insertion
 
 --R1    Comment trier un tableau de taille N<=N_MAX par insertion
---R1.1  Demander à l'utilisateur N
---R1.2  Initialiser le tableau avec des valeurs quelconques entières (via le clavier)
---R1.3  Trier le tableau par insertion
+--R1.1  Demander à l'utilisateur N                  --N out Integer;
+--R1.2  Initialiser le tableau avec des valeurs quelconques entières (via le clavier)   --N in Entier,tab in out Tableau
+--R1.3  Trier le tableau par insertion      --N in Entier, tab in out Tableau
 
 --R2 Comment trier un tableau par insertion
---R2.1  Parcourir le tableau
---R2.2  Décaler l'élément jusqu'à ce qu'il soit trié
+--R2.1  Parcourir le tableau            --tab in [], current out Entier, index out Entier
+--R2.2  Décaler l'élément jusqu'à ce qu'il soit trié        --tab in out [], current in int,index in out int
 
 --R3 Comment décaler l'élément jusqu'à ce qu'il soit trié
--- Tant que index > 1 et alors tab(index-1)>valeur_memorisé faire
---      elem[index]:=elem[index-1]
---      index--
+-- memoire<-tab(index)      
+-- Tant que index > 1 et alors tab(index-1)>valeur_memorisé faire   --index in entier, tab in
+--      elem[index]:=elem[index-1] --tab in out []
+--      index--;                    --index in out;
 -- Fin TQ
 -- elem[index]<-memoire //Nous sommes arrivé à l'index où la valeur mémorisé doit être insérée
 

@@ -1,0 +1,67 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U teststring%b		teststring.adb		cc828378 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D teststring.adb	20211124072341 9366711e teststring%b
+D text_io.ads		20200312110721 21b2c898 text_io%s
+X 1 ada.ads
+16K9*Ada 20e8 25|1r6 1r23 3r6 3r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 25|3w10 3r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 25|1w10 1r27
+208U14*Put 25|29s5
+242U14*Put 25|34s1
+249U14*Get_Line 25|35s1
+263U14*Put_Line 25|32s1 36s1 41s1
+X 25 teststring.adb
+6U11*testString 6b11 43l5 43t15
+8i1 C_MAX{integer} 10r25 13r22 16r28 19r23 24r13 28r13 32r25 41r28
+10a1 nom_charles{string} 25m5 29r9 32r10
+11i1 lnom_charles{integer}
+13a1 nom_jean{string} 35m10 36r10
+14i1 lnom_jean{integer} 35m19 36r22
+16a1 nom_christophe{string} 39m1 41r10
+17i1 lnom_christophe{integer}
+19a1 nom_vanya{string} 38m1 39r17
+20i1 lnom_vanya{integer}
+24i5 i{integer} 25r17
+28i5 i{integer} 29r21
+X 26 text_io.ads
+24K9*Text_IO=24:29 25|2w6 2r19
+
