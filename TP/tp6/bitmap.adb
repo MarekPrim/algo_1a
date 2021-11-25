@@ -13,7 +13,7 @@ procedure bitmap is
     --valeur: in Float, tab: in out [int], bit: in out [bool], imin: in out int, imax:in out int,nb_el:in out Integer
     --Préconditions: imax<N_MAX
     --Postconditions: nbelem' <- nbelem+1
-    procedure ajouterValeur(valeur : in Float;imin:in out Integer;imax:in out Integer;tab : in out TAB_INT;bitmap: in out TAB_BIT;nb_el:in out Integer,index: in out Integer) is
+    procedure ajouterValeur(valeur : in Float;imin:in out Integer;imax:in out Integer;tab : in out TAB_INT;bitmap: in out TAB_BIT;nb_el:in out Integer;index: in out Integer) is
     begin
     --R0 Ajouter une valeur dans un tableau associé à une bitmap
 
@@ -232,28 +232,28 @@ procedure bitmap is
 
 begin
 
-    ajouterValeur(1.0,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(2.0,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(3.0,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(4.0,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(5.0,imin,imax,tableau,bitmap,nbelem);
+    ajouterValeur(1.0,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(2.0,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(3.0,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(4.0,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(5.0,imin,imax,tableau,bitmap,nbelem,index);
 
     suppression(1,bitmap,nbelem,imin,imax);
     suppression(3,bitmap,nbelem,imin,imax);
     suppression(5,bitmap,nbelem,imin,imax);
 
-    ajouterValeur(2.5,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(1.5,imin,imax,tableau,bitmap,nbelem);
-    ajouterValeur(4.0,imin,imax,tableau,bitmap,nbelem);
+    ajouterValeur(2.5,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(1.5,imin,imax,tableau,bitmap,nbelem,index);
+    ajouterValeur(4.0,imin,imax,tableau,bitmap,nbelem,index);
 
     compacter(tableau,bitmap,imin,imax);
-    rechercherFOccu(4.0);
-    rechercherFOccu(1.0);
+    rechercherFOccu(4.0,tableau,bitmap,imin,imax);
+    rechercherFOccu(1.0,tableau,bitmap,imin,imax);
 
     suppression(3,bitmap,nbelem,imin,imax);
     suppression(4,bitmap,nbelem,imin,imax);
 
-    rechercherFOccu(4.0);
+    rechercherFOccu(4.0,tableau,bitmap,imin,imax);
     
     compacter(tableau,bitmap,imin,imax);
 end bitmap;
