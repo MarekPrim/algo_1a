@@ -6,6 +6,7 @@ package body BINAIRY is
     tab: BINAIRE;
     carry: Integer :=0;
 
+
 procedure afficherNombreBinaire(bin:in BINAIRE) is
 begin
 New_Line(1);
@@ -59,15 +60,12 @@ end conversionBinaire;
 
 function binarySum(bin1:in BINAIRE;bin2: in BINAIRE) return BINAIRE is
 begin
-    for i in 0..7 loop
-        tab(8-i):= (bin1(8-i)+bin2(8-i)+carry) mod 2;
-        if(bin1(8-i)+bin2(8-i)+carry >= 2) then
-            carry:=1;
-        else
-            carry:=0;
-        end if;
-    end loop;
-    return tab;
+    carry := conversionDecimal(bin1);
+    sum := conversionDecimal(bin2);
+    if(sum+carry not in 0..255) then
+        raise Constraint_Error;
+    end if;
+    return conversionBinaire(carry+sum);
 end binarySum;
 
 end BINAIRY;
