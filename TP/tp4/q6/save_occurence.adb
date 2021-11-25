@@ -25,6 +25,8 @@ procedure Save_Occurence is
    N_MAX : constant Integer := 20;
    ALEPH : constant Integer := 27;
     TYPE Tab_Entiers is array(1..ALEPH) of Integer;
+
+    
 procedure afficherChaine
  (N:in Integer;
  chaine : in String)is
