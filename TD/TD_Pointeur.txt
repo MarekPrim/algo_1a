@@ -1,0 +1,25 @@
+p1,p2 pointeur sur réel
+q1,q2 pointeur sur complexe
+
+Type complexe record 
+    im réel
+    réel réel
+end record
+
+
+
+1) P1 recoit null
+2) P2 recoit 2.2
+3) Exception ptr null (P1.ALL<-1.2)
+4) P2.ALL<-2.2
+5) P1<-P2
+6) Ecrire(P1) => Affiche 2.2
+7) P2.all<-3.3
+7bis)   Ecrire(P1.all) -> 3.3
+
+8) q1<- New complexe
+9) q1.all.réel <- p1.all
+10) q1.all.im <- p2.all
+11) Ecrire(q1)=> Erreur, on ne peut pas afficher un pointeur
+12) q2<-q1
+13) Ecrire(q2.all.réel) => 3.3
