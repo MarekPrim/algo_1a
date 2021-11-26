@@ -1,0 +1,63 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U tri_insertion_chaine%b  tri_insertion_chaine.adb  1995ae4e NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D tri_insertion_chaine.adb  20211124084008 67c394b0 tri_insertion_chaine%b
+X 1 ada.ads
+16K9*Ada 20e8 25|1r6 1r23 2r6 2r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 25|2w10 2r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 25|1w10 1r27
+166U14*New_Line 25|21s5
+208U14*Put 25|19s9
+249U14*Get_Line 25|55s5
+263U14*Put_Line 25|17s5
+X 25 tri_insertion_chaine.adb
+5U11*Tri_Insertion_Chaine 5b11 76l5 76t25
+11i5 N_MAX{integer} 26r23
+13U11 afficherChaine 13b11 14>3 15>2 22l5 22t19 74s1
+14i3 N{integer} 18r31
+15a2 chaine{string} 19r13
+18i9 j{integer} 19r20
+26a4 chaine{string} 55m14 62r16 64r65 65m9 65r26 69m5 74r32
+27e4 memoire{character} 62m5 64r42 69r20
+28i4 index{integer} 63m5 64r11 64r72 65r16 65r33 66m9 66r16 69r12
+29i4 longueur_chaine{integer} 55m21 56r15 61r27 74r16
+61i5 i{integer} 62r23 63r14
+

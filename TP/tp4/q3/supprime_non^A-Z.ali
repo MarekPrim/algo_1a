@@ -1,0 +1,67 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV SPARK_05
+
+U supprime_caractere_non_lettre%b  supprime_non^A-Z.adb  007533c9 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D supprime_non^A-Z.adb	20211124081431 5f91c1af supprime_caractere_non_lettre%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D text_io.ads		20200312110721 21b2c898 text_io%s
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r23 3r6 3r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 12|3w10 3r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 12|1w10 1r27
+166U14*New_Line 12|38s5
+208U14*Put 12|36s9
+249U14*Get_Line 12|51s5
+263U14*Put_Line 12|34s5
+X 12 supprime_non^A-Z.adb
+26U11*supprime_caractere_non_lettre 26b11 65l5 65t34
+28i1 L_MAX{integer} 41r22 42r24
+30U11 afficherChaine 30b11 31>3 32>2 39l5 39t19 63s5
+31i3 N{integer} 35r31
+32a2 chaine{string} 36r13
+35i9 j{integer} 36r20
+41a5 chaine{string} 51m14 57r26 58r37
+42a5 chaine_2{string} 58m13 63r31
+44i5 l_chaine{integer} 51m21 52r15 56r17
+45i5 l_chaine_2{integer} 58r22 59m13 59r25 63r20
+56i9 i{integer} 57r33 58r44
+X 26 text_io.ads
+24K9*Text_IO=24:29 12|2w6 2r19
+

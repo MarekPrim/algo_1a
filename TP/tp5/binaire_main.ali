@@ -1,0 +1,61 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U binaire_main%b	binaire_main.adb	339b5dc0 NE OO SU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W binairy%s		binairy.adb		binairy.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D binaire_main.adb	20211125085106 ae0c8f11 binaire_main%b
+D binairy.ads		20211125081508 e3c1e82f binairy%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 10|1r6 1r23 2r6 2r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 10|2w10 2r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 10|1w10 1r27
+X 10 binaire_main.adb
+5U11*Binaire_main 5b11 38l5 38t17
+7a5 binaryOne{11|3A6} 14m5 21m1 22r34
+8a5 binaryTwo{11|3A6} 15m5 22m1 23r23
+9a5 binaryDec{11|3A6} 20m1 22r24
+10i5 decBin{integer}
+13i5 i{integer} 14r15 14r19 15r15
+X 11 binairy.ads
+1K9*BINAIRY 10|3w6 3r18 11|29e12
+3A6*BINAIRE(integer)<integer> 10|7r17 8r17 9r17
+9U11*afficherNombreBinaire 10|23s1
+21V10*conversionBinaire{3A6} 10|20s14 21s14
+27V10*binarySum{3A6} 10|22s14
+

@@ -1,0 +1,30 @@
+-- Calcule la somme des entiers naturels
+-- compris entre deux entiers naturels
+-- m et n
+Algorithme sommeEntiersBornés
+	--Calculer la somme des entiers compris entre m et n
+	-- m et n sont lus au clavier de manière fiable et conviviale
+	-- avec m<=n
+		--Lire les entiers m et n de manière fiable et conviviale
+		--LectureFiable(m)
+			Ecrire("Veuillez rentrer m")
+			Lire(m)
+		--LectureFiable(n) jusqu'à n>=m
+			Répeter 
+				Ecrire("Veuillez rentrez n, n plus grand ou égal à m")
+				Lire(n)
+			Jusqu'à n>= m
+			{m<=n}
+		--Calculer la somme des entiers compris entre m et n
+			--CalculSommeEntreMetN
+			--Itérer de m à n pour calculer la somme
+				Pour i de M à N
+				--Attribuer à Somme Somme+i
+					Somme<-Somme+i
+				Fin Pour
+		--Afficher la somme des entiers compris entre m et n
+			--AffichageSomme
+			--Afficher la somme obtenue après calcul
+				Ecrire(Somme)
+
+fin Algorithme sommeEntiersBornés

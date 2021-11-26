@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__puisssance.o
+[PROJECT FILES]
+/home/klegalli/Documents/tpAdaAlgo/tp1/puissance/default.gpr
+20210922093409
+[BOUND OBJECT FILES]
+/home/klegalli/Documents/tpAdaAlgo/tp1/puissance/obj/puisssance.o
+[GENERATED SOURCE FILES]
+b__puisssance.ads
+b__puisssance.adb
+b__puisssance.ali
+[RESULTING OPTIONS]
+-L/home/klegalli/Documents/tpAdaAlgo/tp1/puissance/obj/
+-L/home/klegalli/Documents/tpAdaAlgo/tp1/puissance/obj/
+-L/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+-shared
+-shared-libgcc
+-lgnat-9
+-ldl
+[RUN PATH OPTION]
+/usr/lib/gcc/x86_64-linux-gnu/9/adalib/
+/usr/lib

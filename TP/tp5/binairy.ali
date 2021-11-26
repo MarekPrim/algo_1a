@@ -1,0 +1,74 @@
+V "GNAT Lib v9"
+A -gnatwa
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IO
+RV SPARK_05
+
+U binairy%b		binairy.adb		a6ec50c3 NE OO PK IU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U binairy%s		binairy.ads		e3c1e82f EE NE OO PK IU
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D binairy.ads		20211125081508 e3c1e82f binairy%s
+D binairy.adb		20211125091434 3b7b8212 binairy%b
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 11|1r6 1r31 2r6 2r23
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 11|1w10 1r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 11|2w10 2r27
+166U14*New_Line 11|12s1 21s5 51s13
+242U14*Put 11|49s13
+X 8 a-tiinio.ads
+66U14*Put 11|16s13[3|18] 31s9[3|18] 48s13[3|18] 50s13[3|18]
+X 10 binairy.ads
+1K9*BINAIRY 29l5 29e12 11|3b14 71l5 71t12
+3A6*BINAIRE(integer)<integer> 9r40 15r35 21r54 27r28 27r45 27r61 11|6r10
+. 10r40 24r35 38r54 61r28 61r45 61r61
+9U11*afficherNombreBinaire 9>33 11|10b11 22l5 22t26
+9a33 bin{3A6} 11|10b33 16r17
+15V10*conversionDecimal{integer} 15>28 11|24b10 35l5 35t22 63s14 64s12
+15a28 bin{3A6} 11|24b28 28r27
+21V10*conversionBinaire{3A6} 21>28 11|38b10 58l5 58t22 68s12
+21i28 value{integer} 11|38b28 40r8 44r10
+27V10*binarySum{3A6} 27>20 27>36 11|61b10 69l5 69t14
+27a20 bin1{3A6} 11|61b20 63r32
+27a36 bin2{3A6} 11|61b36 64r30
+X 11 binairy.adb
+5i5 sum{integer} 26m5 28m9 28r14 30r8 31r13 34r12 44m5 46r12 47m13 47r18
+. 48r17 64m5 65r8 68r36
+6a5 tab{10|3A6} 14r12 52m13 54m13 57r12
+7i5 carry{integer} 63m5 65r12 68r30
+13i9 i{integer} 14r18 16r23
+27i9 i{integer} 28r22 28r31
+45i9 i{integer} 46r24 47r30 50r19 52r19 54r19
+

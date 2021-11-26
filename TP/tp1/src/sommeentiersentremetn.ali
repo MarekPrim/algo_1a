@@ -1,0 +1,56 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_IO
+RV SPARK_05
+
+U sommeentiersentremetn%b  sommeentiersentremetn.adb  5b92e9c1 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D sommeentiersentremetn.adb  20210922085608 25c4d33f sommeentiersentremetn%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 12|4r6 4r31 5r6 5r23
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 12|4w10 4r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 12|5w10 5r27
+263U14*Put_Line 12|22s2 32s7 55s3
+X 8 a-tiinio.ads
+56U14*Get 12|23s2[3|18] 33s7[3|18]
+66U14*Put 12|56s3[3|18]
+X 12 sommeentiersentremetn.adb
+6U11*sommeentiersentremetn 6b11 58l5 58t26
+11i4 m{integer} 23m6 34r20 47r27
+12i4 n{integer} 33m11 34r17 47r30
+13i4 somme{integer} 48m7 48r16 56r7
+47i8 i{integer} 48r24
+
