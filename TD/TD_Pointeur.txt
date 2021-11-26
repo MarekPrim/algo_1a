@@ -75,8 +75,8 @@ afficherListeRecur(F_L:in T_liste_linéraire) est
 begin
     Copie_FL<-F_L
     Si Copie_FL^Suivant /= Null alors
-        afficherListeRecur(Copie_FL^Suivant)
         ecrire(Copie_FL^Element)
+        afficherListeRecur(Copie_FL^Suivant)
     fin Si
 end
 
@@ -86,15 +86,9 @@ end
 function estPrésentIte(F_L:in T_liste_linéraire, Val: in Entier) retourne T_Liste_linéaire est
 begin
     Copie_FL<-F_L
-    TQ Copie_FL /= Null faire
-        Si Copie_FL^Element = Val
-            retourne Copie_FL^
-        sinon
-            rien
-        fin Si
-        Copie_FL<-Copie_FL^Suivant
+        TQ Copie_FL /= Null Et alors Copie_FL^Element/= Val faire
     fin TQ
-    retourne null
+    retourne (Non(L=null))
 end
 
 function estPrésentRec(F_L:in T_liste_linéraire, Val: in Entier) retourne T_Liste_linéaire est
@@ -102,12 +96,8 @@ begin
     Copie_FL<-F_L
     if(Copie_FL = Null) alors
         return null;
-    end if;
-    if(Copie_FL^Element=Val) alors
-        return Copie_FL^;
     else
-        estPrésentRec(Copie_FL^Suivant,Val)
-    end if;
+        retourne (F_L^Element = Val OU estPrésentRec(F_L,Val))
 end
 
 
@@ -118,3 +108,47 @@ begin
     Copie_FL<-F_L
     retourne Copie_FL^Element
 end
+
+7)
+
+procedure insererAprès(Val : in Entier; f : in Entier, F_L : in out T_Liste_linéaire)
+    if(F_L=Null) then
+        Swap_Cellule<-new T_Cellule(f,null);
+        F_L<-Swap_Cellule;
+    Copie_FL<-F_L
+    TQ Copie_FL^Element /= f ET Copie_FL^Suivant/= Null faire
+        Copie_FL<-Copie_FL^Suivant
+    Fin TQ
+
+    Swap_Cellule<- New T_Cellule(f,Copie_FL^Suivant);
+    Copie_FL^Suivant<-Swap_Cellule
+fin
+
+8)
+
+procedure supprimer(Val : in Entier;F_L:in out ) est
+    Copie_FL<-F_L
+    Succ<-Copie_FL^Suivant
+    Si Copie_FL^Element=Val alors
+        Copie_FL<-Copie_FL^Suivant
+    sinon
+        TQ  Succ^Element /= Val faire
+            Succ<-Succ^Suivant
+            Copie_FL<-Copie_FL^Suivant
+        fin TQ
+
+        Copie_FL^Suivant<-Succ^Suivant;
+    fin Si
+fin
+
+
+9)
+
+function valeurALindice(index: in entier;F_L:in T_liste_linéraire) return Entier est
+begin
+    Copie_FL<-F_L
+    pour i allant de 1..index-1 faire
+        Copie_FL<-Copie_FL^Suivant
+    fin pour
+    retourn Copie_FL^Element
+end 
