@@ -1,3 +1,5 @@
+Exercice 1:
+
 p1,p2 pointeur sur réel
 q1,q2 pointeur sur complexe
 
@@ -23,3 +25,96 @@ end record
 11) Ecrire(q1)=> Erreur, on ne peut pas afficher un pointeur
 12) q2<-q1
 13) Ecrire(q2.all.réel) => 3.3
+
+
+
+Exercice 2:
+
+
+TYPE T_liste_linéraire est POINTEUR sur Cellule
+
+TYPE T_Cellule est ENREGISTREMENT
+    Element : Entier
+    Suivant : T_liste_linéraire
+end record
+
+1)
+
+procedure Init(F_L: out T_liste_linéraire) est 
+begin
+F_L <- null
+end
+
+2)
+
+procedure AjouterVal(F_L : in out T_liste_linéraire,Val : in Entier) est
+P : T_liste_linéraire
+begin
+P <- New T_liste_linéraire
+P^Element <- Val
+P^Suivant<-F_L
+F_L<-P
+end
+
+OU
+
+F_L <- New T_Cellule(Fe,F_L)
+
+3)
+
+afficherListeIter(F_L : in T_liste_linéraire) est
+begin
+    Copie_Liste <- F_L
+    TQ Copie_Liste /= Null faire
+        ecrire(Copie_Liste^Element)
+        Copie_Liste <- Copie_Liste^Suivant
+    Fin TQ
+end
+
+afficherListeRecur(F_L:in T_liste_linéraire) est
+begin
+    Copie_FL<-F_L
+    Si Copie_FL^Suivant /= Null alors
+        afficherListeRecur(Copie_FL^Suivant)
+        ecrire(Copie_FL^Element)
+    fin Si
+end
+
+
+4)
+
+function estPrésentIte(F_L:in T_liste_linéraire, Val: in Entier) retourne T_Liste_linéaire est
+begin
+    Copie_FL<-F_L
+    TQ Copie_FL /= Null faire
+        Si Copie_FL^Element = Val
+            retourne Copie_FL^
+        sinon
+            rien
+        fin Si
+        Copie_FL<-Copie_FL^Suivant
+    fin TQ
+    retourne null
+end
+
+function estPrésentRec(F_L:in T_liste_linéraire, Val: in Entier) retourne T_Liste_linéaire est
+begin
+    Copie_FL<-F_L
+    if(Copie_FL = Null) alors
+        return null;
+    end if;
+    if(Copie_FL^Element=Val) alors
+        return Copie_FL^;
+    else
+        estPrésentRec(Copie_FL^Suivant,Val)
+    end if;
+end
+
+
+6)
+
+function renvoyerPremElem(F_L:in T_liste_linéraire) retourne Entier est
+begin
+    Copie_FL<-F_L
+    retourne Copie_FL^Element
+end
