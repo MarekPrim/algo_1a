@@ -115,30 +115,36 @@ procedure insererAprès(Val : in Entier; f : in Entier, F_L : in out T_Liste_lin
     if(F_L=Null) then
         Swap_Cellule<-new T_Cellule(f,null);
         F_L<-Swap_Cellule;
-    Copie_FL<-F_L
-    TQ Copie_FL^Element /= f ET Copie_FL^Suivant/= Null faire
-        Copie_FL<-Copie_FL^Suivant
-    Fin TQ
+    sinon
+        Copie_FL<-F_L
+        TQ Copie_FL^Element /= Val OU Copie_FL^Suivant /= Null faire
+            Copie_FL<-Copie_FL^Suivant
+        Fin TQ
 
-    Swap_Cellule<- New T_Cellule(f,Copie_FL^Suivant);
-    Copie_FL^Suivant<-Swap_Cellule
+        Swap_Cellule<- New T_Cellule(f,Copie_FL^Suivant);
+        Copie_FL^Suivant<-Swap_Cellule
+    fi
 fin
 
 8)
 
 procedure supprimer(Val : in Entier;F_L:in out ) est
-    Copie_FL<-F_L
-    Succ<-Copie_FL^Suivant
-    Si Copie_FL^Element=Val alors
-        Copie_FL<-Copie_FL^Suivant
-    sinon
-        TQ  Succ^Element /= Val faire
-            Succ<-Succ^Suivant
-            Copie_FL<-Copie_FL^Suivant
-        fin TQ
 
-        Copie_FL^Suivant<-Succ^Suivant;
-    fin Si
+    Si F_L = Null alors
+        Si F_L^element = val alors
+            F_L<-F_L^Suivant
+        sinon
+            Copie_FL<-F_L
+            TQ Copie_FL^Suivant/=Null et alors Copie_FL^Suivant^Element/= Val  faire
+                Copie_FL<-Copie_FL^Suivant
+            FinTQ
+            Si Copie_FL^Element = Element alors
+                Copie_FL^Suivant<-Copie_FL^Suivant^Suivant
+            sinon
+                rien
+            fin si
+        fin si
+    fin si
 fin
 
 
@@ -147,8 +153,30 @@ fin
 function valeurALindice(index: in entier;F_L:in T_liste_linéraire) return Entier est
 begin
     Copie_FL<-F_L
-    pour i allant de 1..index-1 faire
+    tq i <= index faire
         Copie_FL<-Copie_FL^Suivant
     fin pour
     retourn Copie_FL^Element
 end 
+
+
+
+
+Exercice 3:
+
+
+generic limited
+
+type t is private
+function '='(t,t)
+procedure assign(x:y t)
+
+package P_liste_gen is 
+    spec des sous programmes
+
+end package
+
+package body P_liste_gen is
+    corps des sous_programmes
+
+end package
