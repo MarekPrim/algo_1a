@@ -53,11 +53,13 @@ procedure bitmap is
             tab(i):=valeur;
             bitmap(i):=True;
         elsif(bitmap(imin-1)=false) then
-            ajouterValeur(valeur,imin-1,imax,tab,bitmap,nb_el);
-            index:=imin-1;
+            imin:=imin-1;
+            ajouterValeur(valeur,imin,imax,tab,bitmap,nb_el,index);
+            index:=imin;
         elsif(bitmap(imax+1)=false) then
-            ajouterValeur(valeur,imin,imax+1,tab,bitmap,nb_el);
             index:=imax+1;
+            ajouterValeur(valeur,imin,imax,tab,bitmap,nb_el,index);
+            index:=imax;
         else
             null;
         end if;
@@ -137,14 +139,13 @@ procedure bitmap is
     --tab:in TAB_INT;bit:in TAB_BIT;nbelem:in Integer;imin: in out int, imax:in out int
     --Préconditions:  
     --Postconditions:  
-    procedure afficherTableau(tab:in TAB_INT;bit:in TAB_BIT;imin:in out Integer;imax:in out Integer) is
+    procedure afficherTableau(tab:in TAB_INT;bit:in TAB_BIT;imin:in Integer;imax:in Integer) is
     begin
         New_Line(1);
         Put_Line("Indice min");
         Put(imin);
         Put_Line("Indice max");
         Put(imax);
-
         Put_Line("==================");
         Put_Line("Indice    [Bool]  [Int]");
         Put_Line("==================");
@@ -172,7 +173,7 @@ procedure bitmap is
     begin
         New_Line(1);
         Put("Nb effectifs d'elements : ");
-        Put(nb_el);
+        Put(nbelem);
         Put_Line("==================");
         for i in 1..N_MAX loop
             if(bit(i))then
@@ -188,7 +189,7 @@ procedure bitmap is
     --tab:in TAB_BIT;bit:in TAB_BIT,imin: in out int, imax:in out int
     --Préconditions:  
     --Postconditions:  
-    procedure compacter(tab:in TAB_BIT;bit:in TAB_BIT;imin:in out Integer;imax:in out Integer) is
+    procedure compacter(tab:in out TAB_INT;bit:in out TAB_BIT;imin:in out Integer;imax:in out Integer) is
     begin
 
 
@@ -213,7 +214,9 @@ procedure bitmap is
     for i in imin..imax loop
         if(bit(i)=false) then
             for k in i..imax loop
-                bitmap(k):=bitmap(k+1);
+            imin:=imin-1;
+            imax:=imax-1;
+                bit(k):=bit(k+1);
                 tab(k):=tab(k+1);
             end loop;
         else
@@ -232,6 +235,8 @@ procedure bitmap is
 
 begin
 
+    bitmap(1):=true;
+
     ajouterValeur(1.0,imin,imax,tableau,bitmap,nbelem,index);
     ajouterValeur(2.0,imin,imax,tableau,bitmap,nbelem,index);
     ajouterValeur(3.0,imin,imax,tableau,bitmap,nbelem,index);
@@ -247,13 +252,15 @@ begin
     ajouterValeur(4.0,imin,imax,tableau,bitmap,nbelem,index);
 
     compacter(tableau,bitmap,imin,imax);
-    rechercherFOccu(4.0,tableau,bitmap,imin,imax);
-    rechercherFOccu(1.0,tableau,bitmap,imin,imax);
+    Put(rechercherFOccu(4.0,tableau,bitmap,imin,imax));
+    Put(rechercherFOccu(1.0,tableau,bitmap,imin,imax));
 
     suppression(3,bitmap,nbelem,imin,imax);
     suppression(4,bitmap,nbelem,imin,imax);
 
-    rechercherFOccu(4.0,tableau,bitmap,imin,imax);
+    Put(rechercherFOccu(4.0,tableau,bitmap,imin,imax));
     
     compacter(tableau,bitmap,imin,imax);
+afficherTableau(tableau,bitmap,imin,imax);
+    afficherTableauSiginificatif(tableau,bitmap,nbelem);
 end bitmap;
