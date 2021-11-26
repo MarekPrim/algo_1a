@@ -315,10 +315,13 @@ begin
     //Utilisation case
     TQ(i<taille && ok) alors
         cas ch[i] alors
-            '(' , '[' :
-
-                Empiler(pileChr,ch[i]);
+            '(' :
+                Empiler(pileChr,')');
                 break;
+            '[' :
+                Empiler(pileChr,'[');
+                break; 
+                
 
             ')' , ']' :
 
@@ -337,7 +340,7 @@ begin
 
                 null;
                 break;
-                
+
         fin cas
         i++
     FINTQ
