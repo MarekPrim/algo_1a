@@ -11,8 +11,8 @@ type matrix is array(1..N_MAX) of tableau;
 procedure affiche(m:in Integer;n:in Integer) is
 begin
 
-for a in 1..m loop
-    for b in 1..n loop
+for a in 0..m loop
+    for b in 0..n loop
         put(10*a+b);
     end loop;
     New_Line(1);
@@ -20,24 +20,23 @@ end loop;
 
 end affiche;
 
+procedure afficheRecurBis(m:in Integer;n: in Integer) is
+begin
+    if n>0 then
+        afficheRecurBis(m,n-1);
+    end if;
+    Put(10*m+n);
+end afficheRecurBis;
+
 procedure afficherRecur(m:in Integer;n: in Integer) is
 begin
     if m>0 then
-        if n>0 then
-            afficherRecur(m,n-1);
-            Put(m*10 + n);
-        else
-            afficherRecur(m-1,n);
-            Put(m*10+n);
-            New_Line(1);
-        end if;
-    else
-        if n>0 then
-            afficherRecur(m,n-1);
-            Put(m*10+n);
-        end if;
+       afficherRecur(m-1,n);
     end if;
+    afficheRecurBis(m,n);
+    New_Line(1);
 end afficherRecur;
+
 
 
 
