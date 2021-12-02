@@ -1,0 +1,133 @@
+V "GNAT Lib v9"
+M P W=b
+A -gnatwa
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTIONS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_RECURSION
+RV SPARK_05
+
+U bitmap%b		bitmap.adb		443a3e32 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-flteio.ads		20200312110721 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiflio.ads		20200312110721 56fbda09 ada.text_io.float_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D bitmap.adb		20211126152117 dbe6436c bitmap%b
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 12|1r6 1r23 2r6 2r31 3r6 3r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 12|3w10 3r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 12|2w10 2r35
+X 8 a-textio.ads
+49K13*Text_IO 471e16 12|1w10 1r27
+166U14*New_Line 12|144s9 174s9
+242U14*Put 12|155s13 157s17 159s17 175s9
+263U14*Put_Line 12|145s9 147s9 149s9 150s9 151s9 163s9 177s9
+X 9 a-tiflio.ads
+68U14*Put 12|161s13[3|20] 180s17[3|20]
+X 10 a-tiinio.ads
+66U14*Put 12|146s9[4|18] 148s9[4|18] 154s13[4|18] 176s9[4|18] 255s5[4|18]
+. 256s5[4|18] 261s5[4|18]
+X 12 bitmap.adb
+5U11*bitmap 5b11 266l5 266t11
+6i5 N_MAX{integer} 7r30 8r30 46r13 123r25 178r21
+7A10 TAB_BIT(boolean)<integer> 16r123 77r70 106r60 142r53 172r66 192r55 229r14
+8A10 TAB_INT(float)<integer> 16r100 77r52 142r38 172r51 192r36 230r15
+16U15 ajouterValeur 16b15 16>29 16=47 16=67 16=87 16=108 16=131 16=152 57s13
+. 61s13 71l9 71t22 240s5 241s5 242s5 243s5 244s5 250s5 251s5 252s5
+16f29 valeur{float} 53r21 57r27 61r27
+16i47 imin{integer} 50r14 55r22 56m13 56r19 57m34 58r20 61m34 68m5 68r25
+16i67 imax{integer} 46r8 50r20 57m39 59r22 60r20 61m39 62r20 69m5 69r25
+16a87 tab{8A10} 53m13 57m44 61m44
+16a108 bitmap{7A10} 51r12 54m13 55r15 57m48 59r15 61m48
+16i131 nb_el{integer} 57m55 61m55 67m5 67r12
+16i152 index{integer} 52m13 57m61 58m13 60m13 61m61 62m13 68r30 69r30
+50i9 i{integer} 51r19 52r20 53r17 54r20
+77V14 rechercherFOccu{integer} 77b14 77>30 77>45 77>60 77>78 77>94 100l9
+. 100t24 255s9 256s9 261s9
+77f30 val{float} 93r26
+77a45 tab{8A10} 93r30
+77a60 bitmap{7A10} 93r12
+77i78 imin{integer} 92r14
+77i94 imax{integer} 92r20
+92i9 i{integer} 93r19 93r34 94r20
+106U15 suppression 106b15 106>27 106=45 106=68 106=89 106=109 136l9 136t20
+. 246s5 247s5 248s5 258s5 259s5
+106i27 index{integer} 123r9 126r12 128r8 129r15 130r12 131r15
+106a45 bitmap{7A10} 126m5
+106i68 nb_el{integer} 123r36 127m5 127r12
+106i89 imin{integer} 130r18 131m9
+106i109 imax{integer} 128r14 129m9
+142U15 afficherTableau 142b15 142>31 142>46 142>61 142>77 165l9 165t24 264s1
+142a31 tab{8A10} 161r17
+142a46 bit{7A10} 156r16
+142i61 imin{integer} 146r13 153r18
+142i77 imax{integer} 148r13 153r24
+153i13 i{integer} 154r17 156r20 161r21
+172U15 afficherTableauSiginificatif 172b15 172>44 172>59 172>74 185l9 185t37
+. 265s5
+172a44 tab{8A10} 180r21
+172a59 bit{7A10} 179r16
+172i74 nbelem{integer} 176r13
+178i13 i{integer} 179r20 180r25
+192U15 compacter 192b15 192=25 192=44 192=63 192=83 227l9 227t18 254s5 263s5
+192a25 tab{8A10} 220m17 220r25
+192a44 bit{7A10} 215r12 219m17 219r25
+192i63 imin{integer} 214r14 217m13 217r19
+192i83 imax{integer} 214r20 216r25 218m13 218r19
+214i9 i{integer} 215r16 216r22
+216i17 k{integer} 219r21 219r29 220r21 220r29
+229a5 bitmap{7A10} 238m5 240m41 240r41 241m41 241r41 242m41 242r41 243m41
+. 243r41 244m41 244r41 246m19 246r19 247m19 247r19 248m19 248r19 250m41 250r41
+. 251m41 251r41 252m41 252r41 254m23 254r23 255r37 256r37 258m19 258r19 259m19
+. 259r19 261r37 263m23 263r23 264r25 265r42
+230a5 tableau{8A10} 240m33 240r33 241m33 241r33 242m33 242r33 243m33 243r33
+. 244m33 244r33 250m33 250r33 251m33 251r33 252m33 252r33 254m15 254r15 255r29
+. 256r29 261r29 263m15 263r15 264r17 265r34
+231i5 nbelem{integer} 240m48 240r48 241m48 241r48 242m48 242r48 243m48 243r48
+. 244m48 244r48 246m26 246r26 247m26 247r26 248m26 248r26 250m48 250r48 251m48
+. 251r48 252m48 252r48 258m26 258r26 259m26 259r26 265r49
+232i5 imax{integer} 240m28 240r28 241m28 241r28 242m28 242r28 243m28 243r28
+. 244m28 244r28 246m38 246r38 247m38 247r38 248m38 248r38 250m28 250r28 251m28
+. 251r28 252m28 252r28 254m35 254r35 255r49 256r49 258m38 258r38 259m38 259r38
+. 261r49 263m35 263r35 264r37
+233i5 imin{integer} 240m23 240r23 241m23 241r23 242m23 242r23 243m23 243r23
+. 244m23 244r23 246m33 246r33 247m33 247r33 248m33 248r33 250m23 250r23 251m23
+. 251r23 252m23 252r23 254m30 254r30 255r44 256r44 258m33 258r33 259m33 259r33
+. 261r44 263m30 263r30 264r32
+234i5 index{integer} 240m55 240r55 241m55 241r55 242m55 242r55 243m55 243r55
+. 244m55 244r55 250m55 250r55 251m55 251r55 252m55 252r55
+
