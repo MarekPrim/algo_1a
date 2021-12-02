@@ -1,0 +1,67 @@
+1)
+
+EXCEPTION
+when Data_Error =>
+    Put_Line("Erreur de type")
+    return 1
+
+2)
+
+begin
+    loop
+        Put_Line("Entier")
+        Get(val)
+        Somme+=Val;
+        exit when val=0
+    end loop
+EXCEPTION
+when Data_Error=>
+    Put_Line("Somme partielle")
+    Put(Somme);
+end
+Put_Line("La somme vaut")
+...
+
+3)
+
+somme := 0
+
+loop
+    Put_Line("Entrez un entier")
+    begin
+    Get(val)
+    Somme+=val
+    
+    EXCEPTION
+    when Data_Error =>
+        Put_Line("Erreur de type ignorée")
+        val:=1
+    end
+    
+    exit when val=0
+end loop
+
+
+
+
+
+Exercice 3 :
+
+(Exceptions déclarées dans le package [.ads])
+
+procedure empiler(Pile:in out P_Pile, v:in out T_Pile) is
+    if(Pile.Sommet = Capacite) then
+        raise Pile_Pleine.Exception
+    else
+        Pile.som := Pile.som+1
+        Pile.data(Pile.som) := v
+    end if;
+end;
+
+procedure depiler(Pile: in out P_Pile) is
+    if(Pile.Sommet = 0) then
+        raise Pile_Vide.Exception
+    else
+        Pile.sommet := Pile.sommet - 1
+    end if;
+end;
