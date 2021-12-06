@@ -1,0 +1,76 @@
+V "GNAT Lib v9"
+M P W=b
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U test%b		test.adb		27059842 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W liste%s		liste.adb		liste.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D liste.ads		20211206084007 8c2235d9 liste%s
+D liste.adb		20211206084811 98732f88 liste%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D test.adb		20211206084851 233a1ec1 test%b
+X 1 ada.ads
+16K9*Ada 20e8 25|2r6 2r23
+X 6 a-textio.ads
+49K13*Text_IO 471e16 25|2w10 2r27
+263U14*Put_Line 25|21s5 23s5 27s5 29s5 35s5 37s5 43s5 45s5
+X 10 liste.ads
+2+10 Element 25|6r36 8r35
+4k9*liste 34e10 25|1w6 6r30 8r29
+7R10 cellule
+8P10 liste(7R10[25|6]) 25|11r20[6] 12r21[6] 13r19[8]
+11V14 createEmptyList{8P10[25|6]} 25|17s7[6] 18s7[8]
+13V14 isEmpty{boolean} 25|20s4[6] 26s4[8]
+15U15 inserer_en_tete 25|32s1[6]
+19V14 rechercher{8P10[25|6]} 25|33s6[6] 41s6[6]
+25U15 enlever 25|40s1[6]
+X 25 test.adb
+4U11*test 4b11 48l5 48t9
+6K9 liste_entiers[10|4] 7r5 11r6 12r7
+8K9 liste_string[10|4] 9r5 13r6
+11p1 ti{10|8P10[6]} 17m1 20r12 32m17 32r17 33r17 40m9 40r9 41r17
+12p1 tti{10|8P10[6]} 33m1 34r4 41m1 42r4
+13p1 ts{10|8P10[8]} 18m1 26r12
+
