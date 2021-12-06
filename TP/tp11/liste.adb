@@ -29,7 +29,7 @@ copy : liste;
 begin
     copy := lste;
     if(copy /= null) then
-        --Put(copy.all.val);
+        Put(image(copy.all.val));
         New_Line(1);
         afficher_liste(copy.all.next);
     else
@@ -40,16 +40,11 @@ end afficher_liste;
 function rechercher(lste : in liste; e : in Element) return liste is
 copy : liste;
 begin
-    copy:=lste;
-    while copy.all.next /= null and then copy.all.val /= e loop
-        copy := copy.all.next;
-    end loop;
-
-    if(copy.all.val = e) then
-        return copy;
-    else
-        return null;
-    end if;
+    copy := lste;
+		while copy /= null AND THEN copy.all.val /= e loop
+			copy := copy.all.next;
+		end loop;
+		return(copy);
 end rechercher;
 
 procedure inserer_apres(lste : in out liste; e : in Element; data : in Element) is

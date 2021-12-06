@@ -3,9 +3,9 @@ with Ada.Text_IO; use Ada.Text_IO;
 
 procedure test is
 
-package liste_entiers is new liste(Element=>Integer);
+package liste_entiers is new liste(Element=>Integer,image => Integer'Image);
 use liste_entiers;
-package liste_string is new liste(Element=>Character);
+package liste_string is new liste(Element=>Character, image => Character'Image);
 use liste_string;
 
 ti : liste_entiers.liste;
@@ -30,19 +30,17 @@ else
 end if;
 
 inserer_en_tete(ti,1);
-tti:=rechercher(ti,1);
-if(tti = null) then
-    Put_Line("NOK");
-else
-    Put_Line("OK");
-end if;
+inserer_en_tete(ti,33);
 
-enlever(ti,1);
-tti:=rechercher(ti,1);
-if(tti = null) then
-    Put_Line("OK");
-else
-    Put_Line("NOK");
-end if;
+inserer_en_tete(ts,'f');
+inserer_en_tete(ts,'t');
+
+Put_Line("_____");
+
+afficher_liste(ti);
+
+Put_Line("_____");
+
+afficher_liste(ts);
 
 end test;

@@ -1,5 +1,6 @@
 generic
     type Element is private;
+    with function image(Item : in Element) return String; 
     
 package liste is
 
