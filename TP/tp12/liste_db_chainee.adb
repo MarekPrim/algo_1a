@@ -14,12 +14,12 @@ package body liste_db_chainee is
     
     --Trouver dans la liste
     procedure rechercher(e:in Integer; lste:in out liste) is
-        current : liste := lste;
+        courant : liste := lste;
     begin
         if(lste = null)then
             raise Liste_vide;
         end if;
-        current:=lste;
+        courant:=lste;
 
         if (e>lste.all.element) then
             while(lste/=null and then e/=lste.all.element)loop
@@ -31,7 +31,7 @@ package body liste_db_chainee is
             end loop;
         end if;
         if(lste/=null and then lste.all.element/=e)then
-            lste:=current;
+            lste:=courant;
         end if;
     end rechercher;
 
@@ -103,20 +103,20 @@ package body liste_db_chainee is
 
     --Afficher la liste
     procedure afficher(lste : in liste) is
-        current : liste;
+        courant : liste;
     begin
-        current := lste;
-        if(current/=null)then
+        courant := lste;
+        if(courant/=null)then
             --go to head of list
-            while(current.all.prev/=null)loop
-                current:=current.all.prev;
+            while(courant.all.prev/=null)loop
+                courant:=courant.all.prev;
             end loop;
             
             --print all the list
-            while(current/=null)loop
-                Put(current.all.element,0);
-                Put(" | ");
-                current:=current.all.next;
+            while(courant/=null)loop
+                Put(courant.all.element,0);
+                Put(" : ");
+                courant:=courant.all.next;
             end loop;
             New_line;
         else
@@ -130,11 +130,11 @@ package body liste_db_chainee is
         Put("Actual is : ");
         Put(lste.all.element,0);
         New_line;
-    end afficher;
+    end afficherCourant;
 
     --enlever de la liste
-    procedure remove(e : in Integer; lste: in out liste) is
-        current : liste;
+    procedure enlever(e : in Integer; lste: in out liste) is
+        courant : liste;
     begin
         rechercher(e,lste);
         if(e/=lste.all.element)then
@@ -153,6 +153,6 @@ package body liste_db_chainee is
                 lste:=null;
             end if;
         end if;
-    end remove;
+    end enlever;
 
 end liste_db_chainee;

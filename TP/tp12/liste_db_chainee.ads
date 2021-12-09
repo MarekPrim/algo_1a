@@ -45,6 +45,6 @@ package liste_db_chainee is
     --Préconditions : Element présent
     --Postconditions: Element non présent
     --Exception : Donnee_absente
-    procedure remove(e : in Integer; lste: in out liste);
+    procedure enlever(e : in Integer; lste: in out liste);
 
 end liste_db_chainee;
