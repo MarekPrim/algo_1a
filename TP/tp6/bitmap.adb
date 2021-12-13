@@ -48,7 +48,7 @@ procedure bitmap is
 
         for i in imin .. imax loop
             if not shouldAdd and then not bitmap (i) then
-                tab (i)    := val;
+                tab (i)    := valeur;
                 bitmap (i) := True;
                 shouldAdd  := True;
             end if;
@@ -70,9 +70,9 @@ procedure bitmap is
         end if;
 
         if not shouldAdd then
-            for i in imax .. CMAX loop
-                if not shouldAdd and then not tab (i) then
-                    for j in reverse (imax + 1) .. CMAX loop
+            for i in imax .. N_MAX loop
+                if not shouldAdd and then not bitmap(i) then
+                    for j in reverse (imax + 1) .. N_MAX loop
                         tab (j)    := tab (j - 1);
                         bitmap (j) := bitmap (j - 1);
                     end loop;
