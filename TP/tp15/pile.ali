@@ -1,0 +1,85 @@
+V "GNAT Lib v9"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U pile%b		pile.adb		f2f5459e NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U pile%s		pile.ads		62a48d14 BN EE NE OO PK GE IL
+
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D pile.ads		20211213090325 62a48d14 pile%s
+D pile.adb		20211213085208 ee07f274 pile%b
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 1r23 2r6 2r31
+X 3 a-inteio.ads
+18K13*Integer_Text_IO[8|46] 13|2w10 2r35
+X 7 a-textio.ads
+49K13*Text_IO 471e16 13|1w10 1r27
+166U14*New_Line 13|65s9 71s13
+242U14*Put 13|68s13 69s13 70s13
+263U14*Put_Line 13|62s9 66s9
+X 12 pile.ads
+2+10 T 3r35 31r53 37r46 49r19 13|16r50 30r42
+3V19 image{string} 3>25 13|69s17
+3*25 Item{2+10}
+5k9*pile 2z10 3z19 46E10 53l5 53e9 13|4b14 77l5 77t9
+9X5*Pile_Vide 13|24r15 33r15
+10X5*Pile_Pleine
+11P7*T_Pile 17r31 24r32 31r37 34r37 37r31 40r31 43r34 47c10 50r20 13|6r27
+. 11r28 16r33 21r33 30r27 39r27 40r8 58r30 59r8
+17V14*creerPile{11P7} 17r59 13|6b10 9l5 9t14
+24V14*isEmpty{boolean} 17s51 24>22 13|11b10 14l5 14t12 23s8 32s8 44s8 61s8
+24p22 pile{11P7} 13|11b18 13r13
+31U15*empiler 31=23 31>44 13|16b11 19l5 19t12
+31p23 pile{11P7} 31r76 13|16b19 18m5 18r30
+31*44 val{2+10} 31r84 13|16b41 18r25
+34U15*depiler 34=23 13|21b11 28l5 28t12
+34p23 pile{11P7} 13|21b19 23r16 26m9 26r17
+37V14*sommet{2+10} 31s69 37>21 13|30b10 37l5 37t11
+37p21 pile{11P7} 13|30b17 32r16 35r17
+40V14*taille{integer} 40>21 13|39b10 56l5 56t11
+40p21 pile{11P7} 13|39b17 44r16 48r17
+43U15*afficher 43>24 13|58b11 75l5 75t13
+43p24 pile{11P7} 13|58b20 61r16 64r17
+46R10 C_Pile 47r27 48c14 51e19 13|18r17
+49*13 val{2+10} 13|35r26 69r32
+50p13 next{11P7} 13|26r26 49r24 50r30 72r30
+X 13 pile.adb
+40p1 copy{12|11P7} 48m9 49r15 50m13 50r21
+41i1 temp{integer} 43m5 47m9 51m13 51r21 55r12
+59p1 copy{12|11P7} 64m9 67r15 69r23 72m13 72r21
+
