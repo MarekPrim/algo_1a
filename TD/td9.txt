@@ -290,16 +290,120 @@ Exercice 4 :
 
 1)
 
-           4 
-        2  
-           99
-    1
-            21
-        5
+
+                        99
+                    5       21
+                4
             3
+        2 
+    1 
 
 2)
+
+    function rechercher_arbre(arbre,valeur) retourn noeud
+    debut
+        copie = arbre
+        tant que copie.valeur != valeur faire
+            si copie.valeur > valeur alors
+                copie = copie.gauche
+            sinon (si copie.valeur<valeur)
+                copie = copie.droite
+            fin si
+        fin tq
+
+        retourne copie
+    fin rechercher_arbre
+            
+
+    procedure insertion_arbre(arbre, valeur) est
+    debut
+        copie = arbre
+        tant que copie != null faire
+            si copie.valeur > valeur alors
+                copie = copie.gauche
+            sinon (si copie.valeur<valeur)
+                copie = copie.droite
+            fin si
+        fin tq
+
+        si copie.valeur > valeur alors
+                copie.gauche = nouveau noeud(valeur)
+        sinon (si copie.valeur<valeur)
+                copie.droite = nouveau noeud(valeur)
+        fin si
+        
+    fin debut
+    
 3)
 
-    function length(sda in out) return Integer is
-        
+    function length(arbre in) return Integer is
+        si arbreVide alors 
+            retourne 0
+        sinon
+            lG = length(arbre.gauche)
+            lD = length(arbre.droite)
+            taille = lG + lD + 1
+            retourne taille
+        fin si
+    fin length
+
+4)
+
+procedure afficher_arbre_prefixe(arbre in) is
+    tant que copie_arbre != null
+        put(copie_arbre.val)
+        afficher_arbre_prefixe(copie_arbre.gauche)
+        afficher_arbre_prefixe(copie_arbre.droite)
+    fin tq
+fin afficher_arbre_prefixe
+
+procedure afficher_arbre_infixe
+        afficher_arbre(copie_arbre.gauche)
+        ut(copie_arbre.val)
+        afficher_arbre(copie_arbre.droite)
+afficher_arbre_infixe
+
+procedure afficher_arbre_postfixe
+        afficher_arbre(copie_arbre.gauche)
+        afficher_arbre(copie_arbre.droite)
+        put(copie_arbre.val)
+5)
+
+procedure remove_arbre(arbre in out,valeur in) is
+    si(arbre = null)
+        retourne;
+         
+    if (arbre.gauche = null &&
+       root.droite = null)
+    {
+        if (arbre.valeur == valeur)
+        {
+              arbre=null;
+              return;
+        }
+        else
+            return;
+    }
+
+    arbre q = new arbre;
+    inserer(q,arbre);
+    noeud temp = null, keyNode = null;
+     
+    // Do level order traversal until
+    // we find key and last node.
+    while (!estVide(q))
+    {
+        temp = q.valeur;
+        q.enlever;
+         
+        if (temp.valeur = valeur)
+            keyNode = temp;
+ 
+        if (temp.arbre != null)
+            inserer(q,temp.gauche)
+ 
+        if (temp.droite != null)
+            inserer(q,temp.droite);
+    }
+
+
