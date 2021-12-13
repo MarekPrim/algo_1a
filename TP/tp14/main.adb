@@ -13,5 +13,6 @@ begin
     enlever(999,lste);
     afficher(lste);
     ajouter(88,lste);
+    ajouter(11,lste);
     afficher(lste);
 end main;

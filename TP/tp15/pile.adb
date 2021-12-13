@@ -13,7 +13,7 @@ begin
     return (pile = null);
 end isEmpty;
 
-procedure empiler(pile : in out T_Pile; val : in Integer) is
+procedure empiler(pile : in out T_Pile; val : in T) is
 begin
     pile := new C_Pile'(val, pile);
 end empiler;
@@ -27,7 +27,7 @@ begin
     end if;
 end depiler;
 
-function sommet(pile : in T_Pile) return Integer is
+function sommet(pile : in T_Pile) return T is
 begin
     if isEmpty(pile) then
         raise Pile_Vide;
@@ -44,7 +44,7 @@ begin
     if isEmpty(pile) then
         null;
     else
-        
+        temp := 1;
         copy := pile;
         while copy.all.next /= null loop
             copy := copy.all.next;
@@ -66,7 +66,7 @@ begin
         Put_Line("La pile contient : ");
         while copy /= null loop
             Put("|");
-            Put(copy.all.val);
+            Put(Image(copy.all.val));
             Put("|");
             New_Line(1);
             copy := copy.all.next;

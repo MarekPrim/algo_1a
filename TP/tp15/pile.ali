@@ -1,6 +1,4 @@
 V "GNAT Lib v9"
-A -gnata
-A -gnatwa
 P ZX
 
 RN
@@ -10,22 +8,14 @@ RV NO_IO
 RV NO_LOCAL_ALLOCATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
-RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pile%b		pile.adb		e3005230 NE OO PK
+U pile%b		pile.adb		f2f5459e NE OO PK GE
 W ada%s			ada.ads			ada.ali
-Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
-Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-Z system.assertions%s	s-assert.adb		s-assert.ali
 
-U pile%s		pile.ads		5506045e EE OO PK IL
-Z ada.tags%s		a-tags.adb		a-tags.ali
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+U pile%s		pile.ads		62a48d14 BN EE NE OO PK GE IL
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
@@ -38,10 +28,9 @@ D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D pile.ads		20211213074055 5506045e pile%s
-D pile.adb		20211213075523 c8506c90 pile%b
+D pile.ads		20211213090325 62a48d14 pile%s
+D pile.adb		20211213085208 ee07f274 pile%b
 D system.ads		20200312110721 4635ec04 system%s
-D s-assert.ads		20200312110721 cd8d2c94 system.assertions%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
 D s-exctab.ads		20200312110721 54135002 system.exception_table%s
 D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
@@ -61,34 +50,36 @@ X 3 a-inteio.ads
 X 7 a-textio.ads
 49K13*Text_IO 471e16 13|1w10 1r27
 166U14*New_Line 13|65s9 71s13
-242U14*Put 13|68s13 70s13
+242U14*Put 13|68s13 69s13 70s13
 263U14*Put_Line 13|62s9 66s9
-X 8 a-tiinio.ads
-66U14*Put 13|69s13[3|18]
 X 12 pile.ads
-1K9*pile 44l5 44e9 13|4b14 77l5 77t9
-3R6*C_Pile 4r23 5c14 8e19 13|18r17
-4P6*T_Pile(3R6) 7r20 16r31 23r32 30r37 33r37 36r31 39r31 42r34 13|6r27 11r28
-. 16r33 21r33 30r27 39r27 40r8 58r30 59r8
-6i13*val{integer} 13|35r26 69r26
-7p13*next{4P6} 13|26r26 49r24 50r30 72r30
+2+10 T 3r35 31r53 37r46 49r19 13|16r50 30r42
+3V19 image{string} 3>25 13|69s17
+3*25 Item{2+10}
+5k9*pile 2z10 3z19 46E10 53l5 53e9 13|4b14 77l5 77t9
 9X5*Pile_Vide 13|24r15 33r15
-16V14*creerPile{4P6} 16r59 13|6b10 9l5 9t14
-23V14*isEmpty{boolean} 16s51 23>22 13|11b10 14l5 14t12 23s8 32s8 44s8 61s8
-23p22 pile{4P6} 13|11b18 13r13
-30U15*empiler 30=23 30>44 13|16b11 19l5 19t12
-30p23 pile{4P6} 30r82 13|16b19 18m5 18r30
-30i44 val{integer} 30r90 13|16b41 18r25
-33U15*depiler 33=23 13|21b11 28l5 28t12
-33p23 pile{4P6} 13|21b19 23r16 26m9 26r17
-36V14*sommet{integer} 30s75 36>21 13|30b10 37l5 37t11
-36p21 pile{4P6} 13|30b17 32r16 35r17
-39V14*taille{integer} 39>21 13|39b10 56l5 56t11
-39p21 pile{4P6} 13|39b17 44r16 48r17
-42U15*afficher 42>24 13|58b11 75l5 75t13
-42p24 pile{4P6} 13|58b20 61r16 64r17
+10X5*Pile_Pleine
+11P7*T_Pile 17r31 24r32 31r37 34r37 37r31 40r31 43r34 47c10 50r20 13|6r27
+. 11r28 16r33 21r33 30r27 39r27 40r8 58r30 59r8
+17V14*creerPile{11P7} 17r59 13|6b10 9l5 9t14
+24V14*isEmpty{boolean} 17s51 24>22 13|11b10 14l5 14t12 23s8 32s8 44s8 61s8
+24p22 pile{11P7} 13|11b18 13r13
+31U15*empiler 31=23 31>44 13|16b11 19l5 19t12
+31p23 pile{11P7} 31r76 13|16b19 18m5 18r30
+31*44 val{2+10} 31r84 13|16b41 18r25
+34U15*depiler 34=23 13|21b11 28l5 28t12
+34p23 pile{11P7} 13|21b19 23r16 26m9 26r17
+37V14*sommet{2+10} 31s69 37>21 13|30b10 37l5 37t11
+37p21 pile{11P7} 13|30b17 32r16 35r17
+40V14*taille{integer} 40>21 13|39b10 56l5 56t11
+40p21 pile{11P7} 13|39b17 44r16 48r17
+43U15*afficher 43>24 13|58b11 75l5 75t13
+43p24 pile{11P7} 13|58b20 61r16 64r17
+46R10 C_Pile 47r27 48c14 51e19 13|18r17
+49*13 val{2+10} 13|35r26 69r32
+50p13 next{11P7} 13|26r26 49r24 50r30 72r30
 X 13 pile.adb
-40p1 copy{12|4P6} 48m9 49r15 50m13 50r21
-41i1 temp{integer} 43m5 51m13 51r21 55r12
-59p1 copy{12|4P6} 64m9 67r15 69r17 72m13 72r21
+40p1 copy{12|11P7} 48m9 49r15 50m13 50r21
+41i1 temp{integer} 43m5 47m9 51m13 51r21 55r12
+59p1 copy{12|11P7} 64m9 67r15 69r23 72m13 72r21
 

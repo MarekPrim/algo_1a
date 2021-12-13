@@ -14,6 +14,9 @@ l1 := createEmptyList;
 ajouter(l1,2);
 ajouter(l1,5);
 ajouter(l1,1);
+ajouter(l1,1);
+ajouter(l1,1);
+ajouter(l1,1);
 
 if(l1.all.prev = null) then
     Put_Line("NOK");

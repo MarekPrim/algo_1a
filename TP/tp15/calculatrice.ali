@@ -4,6 +4,7 @@ P ZX
 
 RN
 RV NO_ALLOCATORS
+RV NO_DIRECT_BOOLEAN_OPERATORS
 RV NO_EXCEPTION_HANDLERS
 RV NO_EXCEPTIONS
 RV NO_IO
@@ -13,33 +14,41 @@ RV NO_SECONDARY_STACK
 RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV SPARK_05
 
-U test%b		test.adb		e7fb0555 NE OO SU IL
+U calculatrice%b	calculatrice.adb	85f13a51 NE OO SU IL
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W calculatrice_pile%s	calculatrice_pile.adb	calculatrice_pile.ali
 W pile%s		pile.adb		pile.ali
 Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+Z system.val_int%s	s-valint.adb		s-valint.ali
 
 D ada.ads		20200312110721 76789da1 ada%s
 D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-flteio.ads		20200312110721 e18a47a0 ada.float_text_io%s
 D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
 D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
 D a-tags.ads		20200312110721 491b781d ada.tags%s
 D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiflio.ads		20200312110721 56fbda09 ada.text_io.float_io%s
 D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
 D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D calculatrice.adb	20211213090620 0841112a calculatrice%b
+D calculatrice_pile.ads	20211213090634 70c8db31 calculatrice_pile%s
 D interfac.ads		20200312110721 5ab55268 interfaces%s
 D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
-D pile.ads		20211213085251 b7bb16b0 pile%s
+D pile.ads		20211213090325 62a48d14 pile%s
 D pile.adb		20211213085208 ee07f274 pile%b
 D system.ads		20200312110721 4635ec04 system%s
 D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
@@ -54,31 +63,51 @@ D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
 D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
 D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
 D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-valint.ads		20200312110721 48a52a3f system.val_int%s
 D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
-D test.adb		20211213085220 2e16291b test%b
 X 1 ada.ads
-16K9*Ada 20e8 28|2r6 2r23 3r6 3r31
-X 3 a-inteio.ads
-18K13*Integer_Text_IO[8|46] 28|3w10 3r35
-X 7 a-textio.ads
-49K13*Text_IO 471e16 28|2w10 2r27
-263U14*Put_Line 28|22s23 23s20
-X 8 a-tiinio.ads
-66U14*Put 28|19s5[3|18]
-X 12 pile.ads
-2+10 T 28|6r35
-3V19 image{string} 28|6r46
-5k9*pile 53e9 28|1w6 6r30
-7P10 T_Pile 28|8r19[6]
-9X5 Pile_Vide 28|22r10[6]
-17V14 creerPile{7P10[28|6]} 28|10s10[6]
-31U15 empiler 28|11s5[6] 12s5[6] 13s5[6]
-34U15 depiler 28|17s5[6]
-40V14 taille{integer} 28|19s9[6]
-43U15 afficher 28|15s5[6] 18s5[6]
-X 28 test.adb
-5U11*test 5b11 25l5 25t9
-6K10 pile_entiers[12|5] 7r6 8r6
-8p2 p{12|7P10[6]} 10m5 11m13 11r13 12m13 12r13 13m13 13r13 15r14 17m13 17r13
-. 18r14 19r16
+16K9*Ada 20e8 12|1r6 1r23 2r6 2r31 3r6 3r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 12|3w10 3r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 12|2w10 2r35
+X 8 a-textio.ads
+49K13*Text_IO 471e16 12|1w10 1r27
+166U14*New_Line 12|86s17
+242U14*Put 12|75s41
+249U14*Get_Line 12|64s17
+263U14*Put_Line 12|25s25 37s56 40s62 52s9 60s17 61s17 62s9 77s41 80s61 81s59
+. 82s56
+X 10 a-tiinio.ads
+66U14*Put 12|76s41[4|18]
+X 12 calculatrice.adb
+8U11*calculatrice 8b11 88l5 88t17
+10K13 pileentiers[16|5] 11r9
+21U19 Executer_Calcul 21b19 21>35 21>52 21=66 43l13 43t28 79s66
+21a35 cmd{string} 23r32 23r36 23r58 23r62 24r37 24r41 24r63 24r67 28r38 28r42
+21i52 lg{integer} 23r20
+21r66 calc{13|9R10} 30m55 32m62 34m64 36m58
+45r9 calc{13|9R10} 55m27 55r27 63r31 70m51 70r51 74m62 74r62 79m100 79r100
+46a9 command{string} 64m26 66r36 66r44 69r44 69r52 73r65 79r82
+47i9 longeur{integer} 64m35 66r20 69r28 73r76 76r53 79r91
+48i9 valeur{integer} 73m41 74r68 76r45
+49b9 arret{boolean} 58m9 59r19 67m25
+X 13 calculatrice_pile.ads
+6K9*Calculatrice_Pile 12|5w6 5r29 13|71e22
+9R10*T_Calculatrice 12|21r80 45r16 13|69e27
+11X5*Pas_assez_d_elements 12|40r38
+18U15*initCalculatrice 12|55s10
+25U15*resetCalculatrice 12|70s33
+33U15*empiler_calculatrice 12|74s41
+40U19*somme 12|30s49
+47U19*soustraction 12|32s49
+54U19*multiplication 12|34s49
+61U19*division 12|36s49
+63U15*afficher_calculatrice 12|63s9
+X 16 pile.ads
+2+10 T 12|10r37
+3V19 image{string} 12|10r48
+5k9*pile 12|4w6 10r32 16|53e9
+9X5 Pile_Vide 12|81r46[10]
+10X5 Pile_Pleine 12|80r46[10]
 

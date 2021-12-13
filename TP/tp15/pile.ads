@@ -1,13 +1,14 @@
+generic
+    type T is private; --type T is private in module pile
+    with function image(Item : in T) return String; 
+
 package pile is
 
-type C_Pile;
-TYPE T_Pile is access C_Pile;
-        TYPE C_Pile is record
-            val : Integer;
-            next : T_Pile;
-        END RECORD;
-    Pile_Vide : EXCEPTION;
+   
 
+    Pile_Vide : EXCEPTION;
+    Pile_Pleine : EXCEPTION;
+ type T_Pile is private;
     --Créer une pile vide
     --Paramètres : aucun
     --Préconditions : ∅
@@ -27,18 +28,26 @@ TYPE T_Pile is access C_Pile;
     --Préconditions : rien
     --Postconditions : Sommet(pile) = valeur
     --Exceptions : Constraint_Error
-    procedure empiler(pile : in out T_Pile;val : in Integer) with Post => sommet(pile) = val;
+    procedure empiler(pile : in out T_Pile;val : in T) with Post => sommet(pile) = val;
 
     --Retire un élément en tête de pile
     procedure depiler(pile : in out T_Pile);
 
     --Retourne la valeur du sommet de pile
-    function sommet(pile : in T_Pile) return Integer;
+    function sommet(pile : in T_Pile) return T;
 
     --Retourne la taille de la pile
     function taille(pile : in T_Pile) return Integer;
 
     --Affiche la pile
     procedure afficher(pile : in T_Pile);
+
+    private
+    type C_Pile;
+    TYPE T_Pile is access C_Pile;
+        TYPE C_Pile is record
+            val : T;
+            next : T_Pile;
+        end record;
 
 end Pile;
