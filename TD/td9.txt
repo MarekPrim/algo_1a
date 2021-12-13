@@ -1,0 +1,305 @@
+Exercice 1 :
+
+1)
+
+type Clé is String(1..N_MAX);
+generic type Donnée is private;
+
+type SDA is private;
+
+2)
+
+SDA :
+
+    -- initialiser une SDA
+    -- postconditions : retourne sda vide
+    fonction initialiser retourne SDA;
+
+    -- indique si une sda est vide
+    -- pre -> rien
+    -- post -> rien
+    fonction isEmpty(sda in) retourne Booléen;
+
+    --enregistrer un tuple [cle,valeur]
+    -- post -> tuple (cle,donnee) présent dans la sda
+    -- pre -> rien
+    -- exception -> Clé déjà présente
+    procedure enregistrer(sda in out, cle in String, donnee in integer)
+
+    -- modifier la valeur associée à key
+    -- pre -> cle presente
+    -- post -> sda[cle] = val
+    -- exception -> rien
+    procedure modifier(sda in out,cle in String,val in integer)
+
+    -- supprimer la valeur associée à key
+    -- pre -> sda non vide
+    -- post -> sda[cle] = UB
+    procedure supprimer(sda in out, cle in)
+
+    -- retourne la valeur associée à key
+    -- pre -> sda non vide
+    -- post -> rien
+    -- exception -> sda[key] = Rien
+    fonction atKey(sda in out, key in) retourne integer
+
+    --calcule le nombre d'elements d'une sda
+    -- pre -> rien
+    -- post -> rien
+    -- exception -> rien
+    fonction length(sda in) retourne integer
+
+    -- afficher les données/clés d'une sda
+    -- pre -> rien
+    -- post -> rien
+    -- exception -> rien
+    procedure afficher(sda in)
+
+    -- vider une sda
+    -- pre -> rien
+    -- post -> isEmpty(vider'Resultat) 
+    -- exception -> rien
+    procedure vider(sda in out)
+
+
+Exercice 2:
+
+generic type T is private;
+package P_SDA is
+
+    type SDA is private
+
+    -- initialiser une SDA
+    -- postconditions : retourne sda vide
+    fonction initialiser retourne SDA;
+
+    -- indique si une sda est vide
+    -- pre -> rien
+    -- post -> rien
+    fonction lca_isEmpty(sda in) retourne Booléen;
+
+    --enregistrer un tuple [cle,valeur]
+    -- post -> tuple (cle,donnee) présent dans la sda
+    -- pre -> rien
+    -- exception -> Clé déjà présente
+    procedure lca_enregistrer(sda in out, cle in String, donnee in T)
+
+    -- modifier la valeur associée à key
+    -- pre -> cle presente
+    -- post -> sda[cle] = val
+    -- exception -> rien
+    procedure lca_modifier(sda in out,cle in String,val in T)
+
+    -- supprimer la valeur associée à key
+    -- pre -> sda non vide
+    -- post -> sda[cle] = UB
+    procedure lca_supprimer(sda in out, cle in)
+
+    -- retourne la valeur associée à key
+    -- pre -> sda non vide
+    -- post -> rien
+    -- exception -> sda[key] = Rien
+    fonction lca_atKey(sda in out, key in) retourne T
+
+    --calcule le nombre d'elements d'une sda
+    -- pre -> rien
+    -- post -> rien
+    -- exception -> rien
+    fonction lca_length(sda in) retourne integer
+
+    -- afficher les données/clés d'une sda
+    -- pre -> rien
+    -- post -> rien
+    -- exception -> rien
+    procedure lca_afficher(sda in)
+
+    -- vider une sda
+    -- pre -> rien
+    -- post -> isEmpty(vider'Resultat) 
+    -- exception -> rien
+    procedure lca_vider(sda in out)
+
+    private
+        type cellule;
+        type liste is access cellule;
+        type cellule is record
+            cle : String;
+            value : T;
+            next : liste;
+        end record;
+end package SDA;
+
+2)
+
+package body P_SDA is
+
+    function initialiser return lca is
+        lca : liste;
+    begin
+        lca := null;
+        return lca;
+    end initialiser;
+
+
+    function isEmpty(sda in lca) return lca is
+    copy : liste;
+    begin
+        return sda = null
+    end isEmpty
+
+    ...déjà traité en cours
+
+
+end package P_SDA;
+
+3)
+
+procedure test is
+
+with P_SDA;
+
+package intPSDA is new P_SDA(T=>Integer);
+
+t : SDA;
+
+begin
+
+t := initialiser;
+enregistrer(t,"un",1)
+-- ["un",1] -> null
+
+enregistrer(t,"deux",2)
+-- ["un",1] -> ["deux",2] -> null
+end test;
+
+
+
+Exercice 3 :
+
+1) Le temps d'accès sur une LCA est en O(n), contrairement à une table de hashage en temps O(1)
+
+2)
+
+[2] -> [1]
+[4] -> [2]
+[5] -> [3]
+[6] -> [4]
+
+3) On se retrouve avec un tableau simple, les valeurs de hashage ne discriment pas assez les
+valeurs
+
+4) On peut utiliser la longueur de la clé modulo n
+
+5)
+
+[2] -> [1]
+[4] -> [2,5]
+[5] -> [3]
+[6] -> [4]
+[11] -> [21]
+[21] -> [99]
+
+6)
+
+function hash(carac in String) return Integer is
+    for i in 1..length(carac) loop
+        k++;
+    end loop;
+    return k;
+end hash;
+
+7)
+ function hash(carac in String) return Integer is
+    return code_ascii(carac[0])
+ end hash;
+
+8)
+ function hash(carac in String) return Integer is
+    for i in 1..N_MAX loop
+        sum += code_ascii(carac[i])
+    end loop;
+    return sum;
+ end hash;
+
+9)
+
+    private
+        type T_tab is array(1..C_MAX) of T;
+        type Ht is record
+            tab : T_tab;
+            nb : Integer;
+        end record
+        type sda is array(1..11) of T_tab;
+
+
+10)
+
+function initialiser return sda is
+temp : sda;
+begin
+    for j in 1..C_MAX loop
+        let[j] := null;
+    end loop;
+    for i in 1..11 loop
+        
+        temp[i] := new Ht'(let,0);
+    end loop;
+    return temp;
+end initialiser;
+
+11)
+
+procedure vider(sda in out) is
+    for j in 1..C_MAX loop
+        let[j] := null;
+    end loop;
+    for i in 1..11 loop
+        sda[i] := let;
+    end loop;
+end vider;
+
+12)
+
+procedure enregistrer(sda in out, cle string, value T) is
+begin
+    sda[hash(cle)][sda[hash(cle)].nb + 1] := value;
+end enregistrer;
+
+13)
+
+function isEmpty(sda in out) return Boolean is
+    empty : Boolean := true;
+begin
+    for i in 1..11 loop
+        for j in 1..sda[i].nb loop
+            if(sda[i][j]/= null)
+                empty := false;
+            end if;
+        end loop
+    end loop;
+    return empty;
+end isEmpty;
+
+14)
+déjà fait
+
+
+
+
+Exercice 4 :
+
+1)
+
+           4 
+        2  
+           99
+    1
+            21
+        5
+            3
+
+2)
+3)
+
+    function length(sda in out) return Integer is
+        

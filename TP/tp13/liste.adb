@@ -2,6 +2,7 @@ with Ada.Text_IO; use Ada.Text_IO;
 
 package body liste is
 
+
 function createEmptyList return liste is
     l : liste;
 begin
@@ -100,8 +101,10 @@ procedure enlever(lste : in out liste; e : in Element) is
 copy : liste;
 begin
     copy:=lste;
-    if(rechercher(lste,e) = null or isEmpty(lste)) then
-        null;
+    if(rechercher(lste,e) = null) then
+        raise Data_absente;
+    elsif(isEmpty(lste)) then
+        raise Liste_vide;
     else
         if lste.all.val = e then
             lste := lste.all.next;
@@ -112,6 +115,9 @@ begin
             copy.all.next := copy.all.next.all.next;
         end if;
     end if;
+    EXCEPTION
+    when Data_absente => Put("data absente de la liste");
+    when Liste_vide => Put("liste vide !");
 end enlever;
 
 end liste;
