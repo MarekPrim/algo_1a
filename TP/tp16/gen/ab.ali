@@ -1,0 +1,111 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_STANDARD_STORAGE_POOLS
+RV SPARK_05
+
+U ab%b			ab.adb			ee182340 NE OO PK GE IU
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+U ab%s			ab.ads			b8f2d1e4 BN EE NE OO PK GE IL
+
+D ab.ads		20211214125812 b8f2d1e4 ab%s
+D ab.adb		20211214125840 0e55ae6d ab%b
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-inteio.ads		20210408115627 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+G a e
+G c Z s b [ab standard 7 9 none]
+X 1 ab.ads
+2+10 T 3r35 4r42 5r42 6r42 44r62 52r62 60r59 60r71 68r57 82r18 2|30r62 43r57
+. 60r59 60r71 66r62 68r52
+3V19 image{string} 3>25 2|111s13
+3*25 Item{2+10}
+4V20 "="{boolean} 4>24 4>31 2|48s19
+4*24 Item1{2+10}
+4*31 Item2{2+10}
+5V20 "<"{boolean} 5>24 5>31 2|35s19 51s23 83s19
+5*24 Item1{2+10}
+5*31 Item2{2+10}
+6V20 ">"{boolean} 6>24 6>31 2|85s22
+6*24 Item1{2+10}
+6*31 Item2{2+10}
+7k9*AB 2z10 3z19 4z20 5z20 6z20 79E10 86l5 86e7 2|4b14 118l5 118t7
+9P10*Arbre 20r43 28r37 36r34 44r43 52r43 60r43 68r38 76r33 80c10 83r16 84r17
+. 2|6r43 11r37 16r34 30r43 43r38 60r43 66r43 68r38 100r33
+12X5*Element_non_present 2|81r15
+13X5*Arbre_vide 2|79r15
+20U11*createEmptyBinaryTree 20<33 2|6b11 9l5 9t26
+20p33 abr{9P10} 20r80 2|6b33 8m5
+28V10*isEmptyBinaryTree{boolean} 20s62 28>28 2|11b10 14l5 14t22 20s8 32s8
+. 45s8 70s8 78s8 103s8
+28p28 abr{9P10} 2|11b28 13r13
+36V10*sizeBinaryTree{integer} 36>25 2|16b10 23s21 24s21 27l5 27t19
+36p25 abr{9P10} 2|16b25 20r26 23r36 24r36
+44U11*insertInBinaryTree 44=30 44>50 2|30b11 36s13 38s13 41l5 41t23 63s5
+44p30 abr{9P10} 44r96 2|30b30 32r26 33m9 35r21 36r32 38r32
+44*50 valeur{2+10} 44r100 2|30b50 33r27 35r12 36r46 38r47
+52U11*deleteInBinaryTree 52=30 52>50 2|62s5 66b11 84s13 86s13 94s17 98l5
+. 98t23
+52p30 abr{9P10} 52r96 2|66b30 78r26 80r30 83r21 84r32 85r24 86r32 88r16 89m17
+. 89r24 90r19 91m17 91r24 93r17 93r53 94r36 94r51
+52*50 valeur{2+10} 52r100 2|66b50 80r35 83r12 84r46 85r15 86r47
+60U11*modifyInBinaryTree 60=30 60>50 60>62 2|60b11 64l5 64t23
+60p30 abr{9P10} 60r105 2|60b30 62m24 63m24
+60*50 src{2+10} 2|60b50 62r29
+60*62 tar{2+10} 60r109 2|60b62 63r29
+68V10*searchInBinaryTree{boolean} 44s77 52s77 60s86 68>29 68>45 2|43b10 52s24
+. 54s24 58l5 58t23 80s11
+68p29 abr{9P10} 2|43b29 45r26 48r21 51r25 52r43 54r43
+68*45 valeur{2+10} 2|43b45 48r12 51r16 52r57 54r58
+76U11*afficheArbre 76>24 76=40 2|100b11 107s9 113s9 116l5 116t17
+76p24 abr{9P10} 2|100b24 103r26 107r22 111r19 113r22
+76i40 space{integer} 2|100b40 106m9 106r18 107m36 108r23 113m35
+79R10 noeud 80r26 81c10 85e15 2|33r20
+82*9 valeur{2+10} 2|35r29 48r29 51r33 71r24 83r29 85r32 93m25 94r59 111r27
+83p9 left{9P10} 2|23r44 36m40 52r51 70r34 73r42 84m40 88r24 91r32 113r30
+84p9 right{9P10} 2|24r44 38m40 54r51 86m40 89r32 90r27 93r61 94m44 107r30
+X 2 ab.adb
+17i1 taille_g{integer} 23m9 25r17
+18i1 taille_d{integer} 24m9 25r28
+68V11 minimumBinaryTree{1|2+10} 68b11 68>29 73s16 75l5 75t22 93s35
+68p29 abr{1|9P10} 70r26 71r16 73r34
+108i13 i{integer}
+X 3 ada.ads
+16K9*Ada 2|1r6 1r23 2r6 2r31 3|20e8
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 2|2w10 2r35
+X 9 a-textio.ads
+57K13*Text_IO 2|1w10 1r27 9|727e16
+465U14*Put 2|109s13 111s9
+508U14*Put_Line 2|104s9 112s9
+
