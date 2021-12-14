@@ -1,0 +1,124 @@
+V "GNAT Lib v10"
+P ZX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U p_bitmap%b		p_bitmap.adb		e8ecdab4 NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W text_io%s		text_io.ads		text_io.ali
+
+U p_bitmap%s		p_bitmap.ads		50cbba0e EE NE OO PK
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-flteio.ads		20210408115627 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20210408115627 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-tiflio.ads		20210408115627 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D p_bitmap.ads		20211214124354 50cbba0e p_bitmap%s
+D p_bitmap.adb		20211214125215 8e546626 p_bitmap%b
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z s b [ajouter p_bitmap 11 15 none]
+G c Z s b [rechercher p_bitmap 17 14 none]
+G c Z s b [suppression p_bitmap 23 15 none]
+G c Z s b [afficher p_bitmap 29 15 none]
+G c Z s b [compacter p_bitmap 35 15 none]
+G c Z s s [Ttab_floatBIP p_bitmap 4 5 none]
+G c Z s s [Ttab_booleanBIP p_bitmap 5 5 none]
+X 1 ada.ads
+16K9*Ada 20e8 15|2r6 2r31 3r6 3r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 15|3w10 3r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 15|2w10 2r35
+X 8 a-textio.ads
+264U14*New_Line 15|92s9 95s9 98s9 102s9 114s13 117s9 121s9 127s13
+465U14*Put 15|90s9 93s9 97s9 99s9 100s9 101s9 106s13 108s17 110s17 112s13
+. 118s9
+508U14*Put_Line 15|103s9 116s9 120s9 122s9 129s9
+X 9 a-tiflio.ads
+82U14*Put 15|113s13[3|20] 125s17[3|20]
+X 10 a-tiinio.ads
+80U14*Put 15|91s9[4|18] 94s9[4|18] 105s13[4|18] 119s9[4|18]
+X 14 p_bitmap.ads
+1K9*P_Bitmap 37l5 37e13 15|5b14 150l5 150t13
+3i5*CMAX{integer} 4r32 5r34 15|35r28 37r48 139r35
+4A10*Tab_Float(float)<integer> 11r51 17r48 29r34 35r39 15|7r51 54r48 88r34
+. 133r39
+5A10*Tab_Boolean(boolean)<integer> 11r77 17r71 23r59 29r57 35r66 15|7r78
+. 54r70 69r59 88r57 133r66
+11U15*ajouter 11>24 11=38 11=62 11=91 11=115 11=139 15|7b15 52l9 52t16
+11f24 val{float} 15|7b24 13r28 26r37 41r37
+11a38 tabf{4A10} 15|7b38 13m17 23m25 23r36 26m21 38m25 38r36 41m21
+11a62 bitmap{5A10} 15|7b63 12r43 14m17 21r47 24m25 24r38 27m21 36r47 39m25
+. 39r38 42m21
+11i91 imin{integer} 15|7b93 11r18 20r34 22r34 26r26 27r28 29m21 29r29
+11i115 imax{integer} 15|7b117 11r24 35r22 37r39 41r26 42r28 44m21 44r29
+11i139 length{integer} 15|7b141 50m13 50r23
+17V14*rechercher{integer} 17>26 17>39 17>60 17>84 17>104 15|54b14 66l9 66t19
+17f26 val{float} 15|54b26 60r62
+17a39 tabf{4A10} 15|54b39 60r52
+17a60 bitmap{5A10} 15|54b59 60r33
+17i84 imin{integer} 15|54b84 59r18
+17i104 imax{integer} 15|54b104 59r24
+23U15*suppression 23>28 23=44 23=72 23=96 23=120 15|69b15 85l9 85t20
+23i28 ind{integer} 15|69b28 71r16 73r12 73r28 77r12 81r12
+23a44 bitmap{5A10} 15|69b44 71m9
+23i72 imin{integer} 15|69b72 73r35 77r18 77r40 78m13 78r21 81r40
+23i96 imax{integer} 15|69b96 73r19 77r32 81r18 81r32 82m13 82r21
+23i120 length{integer} 15|69b120 74m13 74r23
+29U15*afficher 29>25 29>46 29>70 29>89 29>109 15|88b15 130l9 130t17
+29a25 tabf{4A10} 15|88b25 113r17 125r21
+29a46 bitmap{5A10} 15|88b46 107r16 124r16
+29i70 imin{integer} 15|88b70 91r13 104r18 123r18
+29i89 imax{integer} 15|88b89 94r13 104r24 123r24
+29i109 length{integer} 15|88b109 119r13
+35U15*compacter 35=26 35=51 35>79 35=98 15|133b15 148l9 148t18
+35a26 tabf{4A10} 15|133b26 141m21 141r32
+35a51 bitmap{5A10} 15|133b51 138r20 140m21 140r34
+35i79 imin{integer} 15|133b79 136r19
+35i98 imax{integer} 15|133b98 137r25 143m17 143r25
+X 15 p_bitmap.adb
+8b5 shouldAdd{boolean} 10m9 12r20 15m17 19r16 21r24 28m21 34r16 36r24 43m21
+. 49r12
+11i13 i{integer} 12r50 13r22 14r24
+20i17 i{integer} 21r54 22r30
+22i25 j{integer} 23r30 23r41 24r32 24r45
+35i17 i{integer} 36r54
+37i25 j{integer} 38r30 38r41 39r32 39r45
+55i5 ind{integer} 57m9 60r16 61m17 65r16
+59i13 i{integer} 60r40 60r57 61r24
+104i13 i{integer} 105r17 107r23 113r22
+123i13 i{integer} 124r23 125r26
+134i5 indice{integer} 136m9 137r15 138r27 139r26 145m17 145r27
+139i21 j{integer} 140r28 140r41 141r26 141r37
+X 29 text_io.ads
+24K9*Text_IO=24:29 15|1w6 1r19
+

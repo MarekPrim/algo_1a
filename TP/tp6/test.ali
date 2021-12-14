@@ -1,0 +1,96 @@
+V "GNAT Lib v10"
+M P W=b
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_IO
+RV SPARK_05
+
+U test%b		test.adb		c2c1a6c3 NE OO SU IL
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W p_bitmap%s		p_bitmap.adb		p_bitmap.ali
+W text_io%s		text_io.ads		text_io.ali
+
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-flteio.ads		20210408115627 e18a47a0 ada.float_text_io%s
+D a-inteio.ads		20210408115627 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-tiflio.ads		20210408115627 bf196650 ada.text_io.float_io%s
+D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D p_bitmap.ads		20211214124354 50cbba0e p_bitmap%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D test.adb		20211214125051 a4791a51 test%b
+D text_io.ads		20210408115627 21b2c898 text_io%s
+G a e
+G c Z b b [test standard 7 11 none]
+G r c none [test standard 7 11 none] [ajouter p_bitmap 11 15 none]
+G r c none [test standard 7 11 none] [rechercher p_bitmap 17 14 none]
+G r c none [test standard 7 11 none] [afficher p_bitmap 29 15 none]
+G r c none [test standard 7 11 none] [suppression p_bitmap 23 15 none]
+G r c none [test standard 7 11 none] [compacter p_bitmap 35 15 none]
+X 1 ada.ads
+16K9*Ada 20e8 28|3r6 3r31 4r6 4r29
+X 3 a-flteio.ads
+20K13*Float_Text_IO[9|46] 28|4w10 4r33
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 28|3w10 3r35
+X 8 a-textio.ads
+264U14*New_Line 28|72s5 77s5 88s5
+508U14*Put_Line 28|31s9 33s9 37s9 39s9 50s9 52s9
+X 10 a-tiinio.ads
+80U14*Put 28|71s5[4|18] 76s5[4|18] 87s5[4|18]
+X 14 p_bitmap.ads
+1K9*P_Bitmap 37e13 28|5w6 5r20
+4A10*Tab_Float(float)<integer> 28|10r12
+5A10*Tab_Boolean(boolean)<integer> 28|11r14
+11U15*ajouter 28|24s5 25s5 26s5 27s5 28s5 58s5 59s5 60s5
+17V14*rechercher{integer} 28|30s8 36s8 49s8 70s12 75s12 86s12
+23U15*suppression 28|45s5 46s5 47s5 79s5 80s5
+29U15*afficher 28|42s5 55s5 62s5 67s5 82s5 93s5
+35U15*compacter 28|65s5 91s5
+X 28 test.adb
+7U11*test 7b11 94l5 94t9
+10a5 tabf{14|4A10} 24m19 24r19 25m19 25r19 26m19 26r19 27m19 27r19 28m19
+. 28r19 30r24 36r24 42r15 49r24 55r15 58m19 58r19 59m19 59r19 60m19 60r19
+. 62r15 65m16 65r16 67r15 70r28 75r28 82r15 86r28 91m16 91r16 93r15
+11a5 bitmap{14|5A10} 18m5 24m25 24r25 25m25 25r25 26m25 26r25 27m25 27r25
+. 28m25 28r25 30r30 36r30 42r21 45m21 45r21 46m21 46r21 47m21 47r21 49r30
+. 55r21 58m25 58r25 59m25 59r25 60m25 60r25 62r21 65m22 65r22 67r21 70r34
+. 75r34 79m21 79r21 80m21 80r21 82r21 86r34 91m22 91r22 93r21
+12i5 imin{integer} 20m5 24m33 24r33 25m33 25r33 26m33 26r33 27m33 27r33 28m33
+. 28r33 30r38 36r38 42r29 45m29 45r29 46m29 46r29 47m29 47r29 49r38 55r29
+. 58m33 58r33 59m33 59r33 60m33 60r33 62r29 65r30 67r29 70r42 75r42 79m29
+. 79r29 80m29 80r29 82r29 86r42 91r30 93r29
+13i5 imax{integer} 19m5 24m39 24r39 25m39 25r39 26m39 26r39 27m39 27r39 28m39
+. 28r39 30r44 36r44 42r35 45m35 45r35 46m35 46r35 47m35 47r35 49r44 55r35
+. 58m39 58r39 59m39 59r39 60m39 60r39 62r35 65m36 65r36 67r35 70r48 75r48
+. 79m35 79r35 80m35 80r35 82r35 86r48 91m36 91r36 93r35
+14i5 length{integer} 21m5 24m45 24r45 25m45 25r45 26m45 26r45 27m45 27r45
+. 28m45 28r45 42r41 45m41 45r41 46m41 46r41 47m41 47r41 55r41 58m45 58r45
+. 59m45 59r45 60m45 60r45 62r41 67r41 79m41 79r41 80m41 80r41 82r41 93r41
+16i5 ind{integer} 70m5 71r9 75m5 76r9 86m5 87r9
+X 29 text_io.ads
+24K9*Text_IO=24:29 28|2w6 2r19
+
