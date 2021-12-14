@@ -1,0 +1,69 @@
+V "GNAT Lib v9"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U test%b		test.adb		8f04b1f0 NE OO SU IL
+W ab%s			ab.adb			ab.ali
+W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+
+D ab.ads		20211214082237 98414479 ab%s
+D ada.ads		20200312110721 76789da1 ada%s
+D a-except.ads		20200312110721 291912d5 ada.exceptions%s
+D a-inteio.ads		20200312110721 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20200312110721 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200312110721 119b8fb3 ada.streams%s
+D a-tags.ads		20200312110721 491b781d ada.tags%s
+D a-textio.ads		20200312110721 881db35a ada.text_io%s
+D a-tiinio.ads		20200312110721 aa04e5d6 ada.text_io.integer_io%s
+D a-unccon.ads		20200312110721 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20200312110721 5ab55268 interfaces%s
+D i-cstrea.ads		20200312110721 e53d8b8e interfaces.c_streams%s
+D system.ads		20200312110721 4635ec04 system%s
+D s-crtl.ads		20200312110721 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200312110721 54135002 system.exception_table%s
+D s-ficobl.ads		20200312110721 078245e4 system.file_control_block%s
+D s-parame.ads		20200312110721 48ec542b system.parameters%s
+D s-secsta.ads		20200312110721 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20200312110721 a7318a92 system.soft_links%s
+D s-stache.ads		20200312110721 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200312110721 09bd3940 system.standard_library%s
+D s-stoele.ads		20200312110721 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200312110721 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20200312110721 1b7d22d2 system.wch_con%s
+D test.adb		20211214084620 6913cf77 test%b
+X 1 ab.ads
+1K9*AB 80e7 26|1w6 1r14
+3P10*Arbre 26|7r7
+14U11*createEmptyBinaryTree 26|10s5
+30V10*sizeBinaryTree{integer} 26|20s9 59s9 79s9
+38U11*insertInBinaryTree 26|12s5 13s5 14s5 15s5 16s5
+46U11*deleteInBinaryTree 26|47s5
+54U11*modifyInBinaryTree 26|62s5
+62V10*searchInBinaryTree{boolean} 26|27s8 34s8 42s8 49s8 63s8 69s8
+70U11*afficheArbre 26|24s5 55s5 75s5
+X 2 ada.ads
+16K9*Ada 20e8 26|2r6 2r23 3r6 3r31
+X 4 a-inteio.ads
+18K13*Integer_Text_IO[9|46] 26|3w10 3r35
+X 8 a-textio.ads
+49K13*Text_IO 471e16 26|2w10 2r27
+166U14*New_Line 26|21s5 25s5 60s5 80s5
+263U14*Put_Line 26|18s5 19s5 28s9 30s9 35s9 37s9 43s9 45s9 50s9 52s9 57s5
+. 58s5 64s9 66s9 70s9 72s9 77s5 78s5
+X 9 a-tiinio.ads
+66U14*Put 26|20s5[4|18] 59s5[4|18] 79s5[4|18]
+X 26 test.adb
+5U11*test 5b11 82l5 82t9
+7p1 arb{1|3P10} 10m27 10r27 12m24 12r24 13m24 13r24 14m24 14r24 15m24 15r24
+. 16m24 16r24 20r24 24r18 27r27 34r27 42r27 47m24 47r24 49r27 55r18 59r24
+. 62m24 62r24 63r27 69r27 75r18 79r24
+8i1 space{integer} 24m23 24r23 55m23 55r23 75m23 75r23
+
