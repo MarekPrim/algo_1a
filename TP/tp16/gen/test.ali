@@ -1,0 +1,96 @@
+V "GNAT Lib v10"
+M P W=b
+P SS ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_LOCAL_ALLOCATORS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV SPARK_05
+
+U test%b		test.adb		60eb3b42 NE OO SU IL
+W ab%s			ab.adb			ab.ali
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ab.ads		20211214125812 b8f2d1e4 ab%s
+D ab.adb		20211214125840 0e55ae6d ab%b
+D ada.ads		20210408115627 76789da1 ada%s
+D a-except.ads		20210408115627 a7106115 ada.exceptions%s
+D a-inteio.ads		20210408115627 f64b89a4 ada.integer_text_io%s
+D a-ioexce.ads		20210408115627 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210408115627 119b8fb3 ada.streams%s
+D a-tags.ads		20210408115627 491b781d ada.tags%s
+D a-textio.ads		20210408115627 aef4d56d ada.text_io%s
+D a-tiinio.ads		20210408115627 390edddb ada.text_io.integer_io%s
+D a-unccon.ads		20210408115627 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20210408115627 5ab55268 interfaces%s
+D i-cstrea.ads		20210408115627 e53d8b8e interfaces.c_streams%s
+D system.ads		20210408115627 4635ec04 system%s
+D s-crtl.ads		20210408115627 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210408115627 54135002 system.exception_table%s
+D s-ficobl.ads		20210408115627 078245e4 system.file_control_block%s
+D s-imgint.ads		20210408115627 02dbe0c2 system.img_int%s
+D s-parame.ads		20210408115627 48ec542b system.parameters%s
+D s-secsta.ads		20210408115627 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20210408115627 a7318a92 system.soft_links%s
+D s-stache.ads		20210408115627 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210408115627 09bd3940 system.standard_library%s
+D s-stoele.ads		20210408115627 2dc34a04 system.storage_elements%s
+D s-traent.ads		20210408115627 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20210408115627 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20210408115627 1b7d22d2 system.wch_con%s
+D test.adb		20211214130459 80a6b66f test%b
+G a e
+G c Z b b [test standard 5 11 none]
+G r i none [test standard 5 11 none] [ab standard 7 9 none]
+X 1 ab.ads
+2+10 T 28|7r27
+3V19 image{string} 28|7r38
+4V20 "="{boolean} 28|7r60
+5V20 "<"{boolean} 28|7r102
+6V20 ">"{boolean} 28|7r81
+7k9*AB 86e7 28|1w6 7r24
+9P10 Arbre 28|10r7[7]
+20U11 createEmptyBinaryTree 28|13s5[7]
+36V10 sizeBinaryTree{integer} 28|23s9[7] 62s9[7] 82s9[7]
+44U11 insertInBinaryTree 28|15s5[7] 16s5[7] 17s5[7] 18s5[7] 19s5[7]
+52U11 deleteInBinaryTree 28|50s5[7]
+60U11 modifyInBinaryTree 28|65s5[7]
+68V10 searchInBinaryTree{boolean} 28|30s8[7] 37s8[7] 45s8[7] 52s8[7] 66s8[7]
+. 72s8[7]
+76U11 afficheArbre 28|27s5[7] 58s5[7] 78s5[7]
+X 3 ada.ads
+16K9*Ada 20e8 28|2r6 2r23 3r6 3r31
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|46] 28|3w10 3r35
+X 9 a-textio.ads
+57K13*Text_IO 727e16 28|2w10 2r27
+264U14*New_Line 28|24s5 28s5 63s5 83s5
+508U14*Put_Line 28|21s5 22s5 31s9 33s9 38s9 40s9 46s9 48s9 53s9 55s9 60s5
+. 61s5 67s9 69s9 73s9 75s9 80s5 81s5
+X 10 a-tiinio.ads
+80U14*Put 28|23s5[5|18] 62s5[5|18] 82s5[5|18]
+X 28 test.adb
+5U11*test 5b11 85l5 85t9
+7K9 BST_int[1|7] 8r5
+10p1 arb{1|9P10[7]} 13m27 13r27 15m24 15r24 16m24 16r24 17m24 17r24 18m24
+. 18r24 19m24 19r24 23r24 27r18 30r27 37r27 45r27 50m24 50r24 52r27 58r18
+. 62r24 65m24 65r24 66r27 72r27 78r18 82r24
+11i1 space{integer} 27m23 27r23 58m23 58r23 78m23 78r23
+

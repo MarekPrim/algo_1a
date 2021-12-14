@@ -4,7 +4,7 @@ with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 
 procedure test is
 
-package BST_int is new AB(T=>Integer,image=>Integer'Image,"=" => Standard."=", ">" => Standard.">,", "<" => Standard."<");
+package BST_int is new AB(T=>Integer,image=>Integer'Image,"=" => Standard."=", ">" => Standard.">", "<" => Standard."<");
 use BST_int;
 
 arb : Arbre;
